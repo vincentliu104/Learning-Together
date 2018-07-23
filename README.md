@@ -1,3 +1,3 @@
 # Learning-Together
 
-test 
+test together
