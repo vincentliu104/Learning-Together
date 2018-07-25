@@ -6,7 +6,8 @@
 2. 切換到你的分支，在 `/resources/` 建立你的學習項目
 3. 學完要提交，請發 pull request 給 @vincentliu104
     - project: `2018`
-
+    - reviews 要做的事: `view change` > `Approve`
+    
 ## TODO
 
 規劃 milestone
