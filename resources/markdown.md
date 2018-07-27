@@ -4,6 +4,34 @@
 - [Cheat Sheet](https://www.markdownguide.org/cheat-sheet/)
 - [Mastering Markdown &middot; GitHub Guides](https://guides.github.com/features/mastering-markdown/): GFM(GitHub Flavored Markdown) 支援 task list, mention, issue, Emoji
 - [Markdown Reference](https://commonmark.org/help/): 提供 10 分鐘練習
+- [Markdown Tutorial](https://www.markdowntutorial.com/)
+
+自動連結: 不想幫連結或mail加上標題時使用
+
+```markdown
+<https://www.google.com>
+<user@example.com>
+```
+
+特殊符號要在他之前加上 `\` 才能正常顯示(應該很少機會用到)
+
+```markdown
+\   backslash
+`   backtick
+*   asterisk
+_   underscore
+{}  curly braces
+[]  square brackets
+()  parentheses
+#   hash mark
+
++   plus sign
+-   minus sign (hyphen)
+.   dot
+!   exclamation mark
+```
+
+-----
 
 ## VSCode Tools
 
