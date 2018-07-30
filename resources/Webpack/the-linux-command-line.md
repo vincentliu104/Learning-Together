@@ -81,10 +81,23 @@ ls -t | sort by modification time
 file | Determine file type
 less | View file contents，專門用來看文字類型的檔案，如：設定檔、script
 
-多數 command 支援 options 包含多個(mac 不支援 long option?)
+多數 command 支援 options，可包含多個(mac 不支援 long option?)
 
 ```shell
-command -options arguments
+# command -options arguments
 ls -lt
 ls -lt --reverse
 ```
+
+ls 常見 options
+
+option | long option | 說明
+---|---|---
+-a | --all | 列出所有檔案，包含隱藏檔
+-d | --directory | 列出目錄內容，通常會用 `ls -ld`
+-F | --classify | 列出目錄時會加上 /
+-h | --human-readable | file size 好讀版
+-l | | long format
+-r | --reverse | 倒序列出檔案，通常 ls 會根據字母排序
+-S | |
+-t | |
