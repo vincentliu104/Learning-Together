@@ -71,8 +71,8 @@ ls -a | # 包含隱藏檔案
 主要介紹指令
 
 1. `ls`: 最常使用的指令，可以看目前目錄下有哪些檔案
-1. `file`
-1. `less`
+1. `file`: 查看檔案類型
+1. `less`: 門用來看文字類型的檔案，如：設定檔、script
 
 選項(Options)與參數(Arguments)
 
@@ -84,12 +84,12 @@ ls -lt
 ls -lt --reverse
 ```
 
+## ls
+
 指令 | 說明
 ---|---
 ls /usr | 列出 /usr 目錄下的檔案
 ls ~ /usr | 列出 home 與 usr 目錄下的檔案
-file | Determine file type
-less | View file contents，專門用來看文字類型的檔案，如：設定檔、script
 
 ls 常見 options
 
@@ -103,3 +103,57 @@ option | long option | 說明
 -r | --reverse | 依據檔名字母順序倒序顯示，通常 ls 會根據字母排序
 -S | | 依據 file size 排序
 -t | | 依據 modification time 排序
+
+long option 範例
+
+```shell
+-rw-r--r-- 1 root root 3576296 2007-04-03 11:05 Experience ubuntu.ogg
+-rw-r--r-- 1 root root 1186219 2007-04-03 11:05 kubuntu-leaflet.png
+-rw-r--r-- 1 root root 47584 2007-04-03 11:05 logo-Edubuntu.png
+-rw-r--r-- 1 root root 44355 2007-04-03 11:05 logo-Kubuntu.png
+-rw-r--r-- 1 root root 34391 2007-04-03 11:05 logo-Ubuntu.png
+-rw-r--r-- 1 root root 32059 2007-04-03 11:05 oo-cd-cover.odf
+-rw-r--r-- 1 root root 159744 2007-04-03 11:05 oo-derivatives.doc
+-rw-r--r-- 1 root root 27837 2007-04-03 11:05 oo-maxwell.odt
+-rw-r--r-- 1 root root 98816 2007-04-03 11:05 oo-trig.xls
+-rw-r--r-- 1 root root 453764 2007-04-03 11:05 oo-welcome.odt
+-rw-r--r-- 1 root root 358374 2007-04-03 11:05 ubuntu Sax.ogg
+```
+
+* `-rw-r--r--`: 權限，第一碼表示檔案類型(`-`表示檔案，`d`表示目錄)，接下來每三碼*一組，依序為擁有者(owner)、所屬群組、其他人是否去有讀、寫、執行的權限
+* `1`: 連結數(hard link)
+* `root`: 檔案擁有者
+* `root`: 檔案所屬群組
+* `32059`: 檔案大小(byte)
+* `2007-04-03 11:05`: 檔案最後更改時間
+* `oo-trig.xls`: 檔案名稱
+
+## less is more
+
+被設計用來取代 `more` 指令
+
+```shell
+# 格式: less filename
+[me@linuxbox ~]$ less /etc/passwd
+```
+
+使用 less 時可用鍵盤指令
+指令 | 動作
+---|---
+b | 往上滾動一頁
+space | 往下滾動一頁
+向上鍵 | 往上一行
+向下鍵 | 往下一行
+G | 移動到檔案末端
+g | 移動到檔案開頭
+/關鍵字 | 搜尋關鍵字
+n | 移動到下一個關鍵字
+h | 求救
+q | 結束 less
+
+## 探索目錄
+
+1. cd 到指定路徑
+2. ls -l 列出資料夾內容
+3. 有興趣的檔案，使用 file
+4. 看起來像文字檔，就用 less 透視他全身上下
