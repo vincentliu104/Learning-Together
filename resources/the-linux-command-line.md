@@ -44,17 +44,20 @@ exit | 離開
 
 Linux 利用 hierarchical directory structure 管理檔案，最上層是 root，Linux 只會有一份 file system tree，額外儲存設備都是由管理人員掛載上的(精準地說是 mount)，每個使用者登入後都會先進到自己的 home directory
 
+主要介紹指令
+
+1. `pwd`: 目前所在目錄
+1. `cd`: 切換目錄，可使用絕對路徑(absolute path)或相對路徑(relative path)
+1. `ls`: 列出目前目錄的檔案內容
+
 指令 | 說明
 ---|---
-pwd | # Print name of current working directory
-cd | # Change directory, 可使用 absolute path or relative path
 cd . | # 到目前 working directory
 cd .. | # 到目前 working directory 上一層
-ls | # List directory contents
-ls -a | # 包含隱藏檔案
-cd | # 切換到 home 目錄
 cd - | # 切換到剛剛的 working directory
+cd | # 切換到 home 目錄
 cd ~user_name | # 切換到 user_name 的 home 目錄
+ls -a | # 包含隱藏檔案
 
 重要資訊
 
@@ -65,39 +68,38 @@ cd ~user_name | # 切換到 user_name 的 home 目錄
 
 ## 4 – Exploring The System
 
-指令 | 說明
----|---
-ls | List directory contents
-ls /usr | 列出 usr 目錄下的檔案
-ls ~ /usr | 列出 home, usr 目錄下的檔案
-ls -l |
-ls -a |
-ls -d, ls -ld | 指定目錄
-ls -F| 列出目錄時會加上 /
-ls -h | file size 好讀版
-ls -r | reverse order
-ls -S | sort by file size
-ls -t | sort by modification time
-file | Determine file type
-less | View file contents，專門用來看文字類型的檔案，如：設定檔、script
+主要介紹指令
 
-多數 command 支援 options，可包含多個(mac 不支援 long option?)
+1. `ls`: 最常使用的指令，可以看目前目錄下有哪些檔案
+1. `file`
+1. `less`
+
+選項(Options)與參數(Arguments)
+
+大多數下指令時，都會加上一個或多個選項
 
 ```shell
-# command -options arguments
+# 格式: command -options arguments
 ls -lt
 ls -lt --reverse
 ```
+
+指令 | 說明
+---|---
+ls /usr | 列出 /usr 目錄下的檔案
+ls ~ /usr | 列出 home 與 usr 目錄下的檔案
+file | Determine file type
+less | View file contents，專門用來看文字類型的檔案，如：設定檔、script
 
 ls 常見 options
 
 option | long option | 說明
 ---|---|---
 -a | --all | 列出所有檔案，包含隱藏檔
--d | --directory | 列出目錄內容，通常會用 `ls -ld`
+-d | --directory | 指定目錄，通常會用 `ls -ld`
 -F | --classify | 列出目錄時會加上 /
 -h | --human-readable | file size 好讀版
 -l | | long format
--r | --reverse | 倒序列出檔案，通常 ls 會根據字母排序
--S | |
--t | |
+-r | --reverse | 依據檔名字母順序倒序顯示，通常 ls 會根據字母排序
+-S | | 依據 file size 排序
+-t | | 依據 modification time 排序
