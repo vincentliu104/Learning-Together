@@ -264,3 +264,58 @@ ln -s item link # symbolic link, item 可以是檔案或目錄
 特殊型態的檔案，指標指向檔案或目錄，類似 Windows 中的捷徑
 
 如果參照的檔案或目錄先被刪除，會形成 broken link
+
+### playground
+
+```shell
+# Creating Directories
+cd
+mkdir playground
+cd playground
+mkdir dir1 dir2
+
+# Copying Files
+cp /etc/passwd .
+ls -l
+cp -v /etc/passwd .
+cp -i /etc/passwd .
+
+# Moving And Renaming Files
+mv passwd fun
+mv fun dir1
+mv dir1/fun dir2
+mv dir2/fun .
+mv fun dir1
+mv dir1 dir2
+ls -l dir2
+ls -l dir2/dir1
+mv dir2/dir1 .
+mv dir1/fun .
+
+# Creating Hard Links
+ln fun fun-hard
+ln fun dir1/fun-hard
+ln fun dir2/fun-hard
+ls -l
+ls -li
+
+# Creating Symbolic Links
+ln -s fun fun-sym
+ln -s ../fun dir1/fun-sym
+ln -s ../fun dir2/fun-sym
+ls -l dir1
+ln -s /home/me/playground/fun dir1/fun-sym
+ln -s dir1 dir1-sym
+ls -l
+
+# Removing Files And Directories
+rm fun-hard
+ls -l
+rm -i fun
+ls -l
+less fun-sym
+rm fun-sym dir1-sym
+ls -l
+cd
+rm -r playground
+```
