@@ -726,7 +726,7 @@ The total is 00.00
 
 #### Double Quotes
 
-雙引號中，shell 認得的特殊字元會失去其意義，例外的有 $, \, `
+雙引號中，shell 認得的特殊字元會失去其意義，例外的有 $, \\, `
 
 ```shell
 # word-splitting
