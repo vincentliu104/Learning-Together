@@ -63,7 +63,7 @@
 
 ## 工作目錄與索引
 
-![工作目錄與索引](https://i.imgur.com/sKBh7q1.jpg)
+![工作目錄與索引](https://i.imgur.com/rhRqnKp.jpg)
 
-- **工作目錄(working tree):** 橘色框框，顯示有被修改過或是新增的檔案
-- **索引(index):** 粉紫色框框，要下的 commit 中，是跟哪幾個檔案有關，換句話說，哪幾個修改的檔案，要包含在你這次下的 commit 中
+- **工作目錄(working directory):** 橘色框框，顯示有被修改過或是新增的檔案
+- **索引(index):** 粉紫色框框，要下的 commit 中，是跟哪幾個檔案有關，換句話說，哪幾個修改的檔案，要包含在你這次下的 commit 中，可以理解為 commit 的準備區
