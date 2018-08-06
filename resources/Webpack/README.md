@@ -5,6 +5,3 @@
 * [Webpack中文文檔](https://webpack.docschina.org/concepts/)
 * [Webpack鐵人賽教學](https://ithelp.ithome.com.tw/users/20069901/ironman/1074)
 * [Webpack 4 升級與使用](https://zhuanlan.zhihu.com/p/34421707)
-
-### npm 
-* [npm 指令](https://www.eebreakdown.com/2016/09/npm.html)
