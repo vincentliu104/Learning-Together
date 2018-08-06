@@ -13,4 +13,8 @@
 * [安裝教學](https://segmentfault.com/a/1190000010454922)
 * [鐵人賽教學](https://ithelp.ithome.com.tw/articles/10193122)
 * [create-react-app的使用及原理分析](https://hk.saowen.com/a/d91e46e7c3c6a137d56fe539ee9d7f4c94255ecab8bc414da4141f56c253c07c)
+<<<<<<< HEAD
 * [create-react-app GitHub](https://github.com/facebook/create-react-app)
+=======
+* [create-react-app GitHub](https://github.com/facebook/create-react-app)
+>>>>>>> master
