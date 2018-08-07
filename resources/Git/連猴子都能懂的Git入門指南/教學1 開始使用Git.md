@@ -51,7 +51,7 @@
         i. On branch master: 現在是在名為 master的 分支上作業
         ii. Initial commit: 你的第一個 commit
         iii. Untracked files: 代表 GIT 還沒監控的檔案， 剛剛新增的 sample.txt 就是 GIT 要    告訴你，他還不認識的檔案
-        iv. nothing added to commit but untracked files present (use "git add" to     track: 代表還沒決定要下 commit 的檔案，GIT 告訴你，如果把檔案下 commit ，請使用     `git add`，決定要下 commit 的檔案
+        iv. nothing added to commit but untracked files present (use "git add" to track: 代表還沒決定要下 commit 的檔案，GIT 告訴你，如果把檔案下 commit ，請使用 `git add`，決定要下 commit 的檔案
 1. (b) `$ git add <file>`: 將檔案加入要下 commit 的準備區，`git add .`，可以將所有檔案一次加到準備區(索引 index)中
 
     ```sh
