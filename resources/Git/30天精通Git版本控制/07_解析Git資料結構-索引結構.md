@@ -88,3 +88,50 @@ Git 索引檔偵測到檔案被刪除
 
 ![](https://i.imgur.com/UDEAZqg.png)
 
+
+----
+
+## 額外練習
+
+#### 刪除遠端分支
+
+`git push (origin) :(branch_name)`
+
+`origin` : 從Github的Repo 遠端 remote add origin master
+的時候，origin是自己取的別名 可能有所不同
+
+`git push origin master:branch_name`
+
+![](https://i.imgur.com/zYnJXHa.png)
+
+
+目前這個 `Repo` 的所有分支
+
+![](https://i.imgur.com/8i9l3aL.png)
+
+使用 
+
+`git push origin --delete branch_name`
+
+ `git push origin :branch_name`
+
+是一樣的，都是要刪除上圖 <font color="red">**紅色的遠端分支**</font>
+
+而如果使用的是
+
+`git branch -D branch_name`
+
+則是刪除上圖 白色的 Local 分支
+
+
+`git pull`
+Git 會自動偵測遠端 Repo 的狀態，會把遠端分支的變更/新增也拉回來
+
+![](https://i.imgur.com/rIxkLOv.png)
+
+
+----
+
+# 參考來源 
+
+[【狀況題】怎麼刪除遠端的分支？](https://gitbook.tw/chapters/github/delete-remote-branch.html)
