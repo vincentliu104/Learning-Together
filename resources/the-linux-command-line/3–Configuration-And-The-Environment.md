@@ -121,6 +121,8 @@ alias ll='ls -l --color=auto'
 
 #### Activating Our Changes
 
+修改後 .bashrc 並不會再重啟 termainl session 前生效，因為 .bashrc 已經被讀取到當前的 session，重新讀取要使用 `source`
+
 ```shell
 source .bashrc
 
@@ -128,3 +130,154 @@ ll
 ```
 
 bach manual `INVOCATION` 有更多詳情
+
+## 13 – A Gentle Introduction To vi
+
+vi 包含在 vim 中
+
+### Why We Should Learn vi
+
+* 通常系統都會有 vi
+* 輕量及快速
+* 不讓其他 Linux 或 Unix 使用者認為你是娘炮
+
+### A Little Background
+
+第一版的 vi 是由 UCB 的學生 Bill Joy 在 1967 年所撰寫，後來與他人共同創立 Sun Microsystems。 vi 的名稱來自於 `visual`。在 `visual` editor 之前，曾有一次只能編輯一行的 `line` editor。vi 併入了 line editor `ex`，使用 vi 時可以使用行編輯指令
+
+多數 Linux 發行版本並沒有 vi，取而代之的是 vim(vi improved) by Bram Moolenaar，vim 通常會 symlink 到 vi 或使用別名
+
+### Starting And Stopping vi
+
+如果你在 vi 中迷失了，按兩次 `Esc` 可以解救你
+
+```shell
+vi
+
+# 接下來會是
+~                                      VIM - Vi IMproved
+~
+~                                      version 8.0.1283
+~                                  by Bram Moolenaar et al.
+~                         Vim is open source and freely distributable
+~
+~                                Help poor children in Uganda!
+~                       type  :help iccf<Enter>       for information
+~
+~                       type  :q<Enter>               to exit
+~                       type  :help<Enter>  or  <F1>  for on-line help
+~                       type  :help version8<Enter>   for version info
+
+# 離開 vi
+:q
+
+# 強制離開 vi
+:q!
+```
+
+### Editing Modes
+
+`~` 表示這行沒有任何字
+
+vi 是 modal editor，在 vi 啟動後會處於指令模式(command mode)，任何按鍵都會是
+指令
+
+```shell
+rm -f foo.txt
+vi foo.txt
+```
+
+#### Entering Insert Mode
+
+按下 `i`，termail 會出現狀態文字，要離開 insert mode 按下 `Esc`
+
+```shell
+-- INSERT --
+```
+
+#### Saving Our Work
+
+須在指令模式輸入 ex 指令，按下 `:` 即可
+
+```shell
+# 寫入修改的檔案
+:q
+```
+
+#### 移動游標(Moving The Cursor Around)
+
+指令模式下，vi 提供大量的指令，有一部份會和 `less` 共用
+
+Key | Moves The Cursor
+----|-----------------
+l or Right Arrow | 往右一個字元
+h or Left Arrow | 往左一個字元
+j or Down Arrow | 往下一行
+k or Up Arrow | 往上一行
+0 (zero) | 到此行開頭
+^ | 到此行第一個非空白字元
+$ | 到此行尾
+w | 到下一個字的開頭或標點符號
+W | 到下一個字的開頭，忽略標點符號
+b | 到前一個字的開頭或標點符號
+B | 到前一個字的開頭，忽略標點符號
+Ctrl-f or Page Down | 到下一頁
+Ctrl-b or Page Up | 回上一頁
+numberG | 到指定行數，例如 1G 游標就會移到第 1 行
+G | 到檔案行尾
+
+h, j, k, l 用來移動游標是因為，並非全部的 terminal 都有方向鍵
+
+多數的指令可以前方加上數字，表示重複執行的次數，例如 `5j` 表示游標往下移動五行
+
+### Basic Editing
+
+vi 復原的方式是在指令模式時按下 `u`(undo)
+
+vi 僅支援復原一次，vim 可復原多次
+
+#### Appending Text
+
+`a`: 會讓游標晃下一個字移動，進入 insert mode
+
+#### 新增一行(Opening A Line)
+
+Command     Opens
+o(小 O)     下方加一行
+O           上方加一行
+
+#### 刪除文字(Deleting Text)
+
+Command | Deletes
+--------|--------
+x | 游標所在文字
+3x | 游標所在文字，加上之後的兩個
+dd | 游標所在行的所有文字
+5dd | 目前行的文，加上之後的四行
+dW | 游標所在到下一個字的開頭
+d$ | 游標所在到行尾
+d0 | 游標所在到此行開頭
+d^ | 游標所在到第一個非空白字元
+dG | 游標所在行到檔案末端
+d20G | 游標所在行到第二十行
+
+### 剪下、複製、貼上(Cutting, Copying And Pasting Text)
+
+d 指令不只刪除文字，同時會剪下文字，之後可以用  p 指令貼上，y 使用來複製
+
+Command | Copies
+--------|-------
+yy | 游標所在行
+5yy | 游標所在行，加上接下來的 4 行
+yW | 游標所在到下一個字的開頭
+y$ | 游標所在到行尾
+y0 | 游標所在到此行開頭
+y^ | 游標所在到第一個非空白字元
+yG | 游標所在行到檔案末端
+y20G | 游標所在行到第二十行
+
+大寫 P 會貼上游標上方一行
+
+#### Joining Lines
+
+`J` 結合游標所在行跟下一行
