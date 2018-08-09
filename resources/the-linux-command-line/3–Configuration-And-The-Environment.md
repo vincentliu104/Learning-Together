@@ -281,3 +281,98 @@ y20G | 游標所在行到第二十行
 #### Joining Lines
 
 `J` 結合游標所在行跟下一行
+
+### 搜尋與取代(Search And Replace)
+
+#### Searching Within A Line
+
+f: 在游標所在行搜尋
+
+#### Searching The Entire File
+
+/: 與 less 指令相同，在輸關鍵字按下 Enter 即可，按下 n 跳到下一個
+
+#### Global Search And Replace
+
+例如把  Line 換成 line
+
+```shell
+:%s/Line/line/gc
+```
+
+item | Meaning
+-----|--------
+: | ex 指令的開頭
+% | 指定行數範圍，% 代表全部，`1,5`代表第一行到第五行，`1,$`代表第一行到最後一行。如果未指定，就只會在目前行數作業
+s | 指定作業，`s`表示搜尋及取代
+/Line/line/ | The search pattern and the replacement text.
+g | 全域性(global)。如果未指定，只會取代每一行第一個找到的字串
+c | 取代時，會要求確認，例如 `replace with Line (y/n/a/q/l/^E/^Y)?`
+
+### Editing Multiple Files
+
+```shell
+# vi file1 file2 file3...
+
+ls -l /usr/bin > ls-output.txt
+vi foo.txt ls-output.txt
+```
+
+#### 切換檔案(Switching Between Files)
+
+如果更動後沒儲存，vi 不會讓你切換檔案，除非你加上 `!`
+
+`:n`: ex 指令，下一個
+`:N`: ex 指令，上一個
+`:buffers`: vim 提供的 ex 指令，讓你輕鬆切換檔案
+`:buffer 2`: 切換到第二個檔案
+
+#### 開啟額外檔案(Opening Additional Files For Editing)
+
+```shell
+vi foo.txt
+:e ls-output.txt
+```
+
+#### Copying Content From One File Into Another
+
+```shell
+# 切換到 buffer 1
+:buffer 1
+
+# 複製一行
+yy
+
+#切換到 buffer 2
+:buffer 2
+
+# 貼上
+p
+```
+
+#### Inserting An Entire File Into Another
+
+```shell
+vi ls-output.txt
+
+# 游標前的內容複製到 foo.txt
+:r foo.txt
+```
+
+### 儲存(Saving Our Work)
+
+* `ZZ`: 指令模式下，純存檔案然後離開 vi
+* `:wq`: 同上
+* `:w`: 可指定檔案名稱，類性 `另存為`，要注意儲存後你還是在編輯原本的檔案
+
+```shell
+# 假設你正在編輯 foo.txt，想把他另存為 foo1.txt
+:w foo1.txt
+```
+
+### 更多介紹
+
+* [Learning The vi Editor](http://en.wikibooks.org/wiki/Vi) A Wikibook from Wikipedia that offers a concise guide to vi and several of its work-a-likes including vim
+* [The Vim Book](ftp://ftp.vim.org/pub/vim/doc/book/vimbook-OPL.pdf) The vim project has a 570-page book that covers (almost) all of the features in vim.
+* [A Wikipedia article on Bill Joy](http://en.wikipedia.org/wiki/Bill_Joy)
+* [A Wikipedia article on Bram Moolenaar](http://en.wikipedia.org/wiki/Bram_Moolenaar) the author of vim
