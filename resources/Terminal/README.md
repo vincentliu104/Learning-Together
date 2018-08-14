@@ -11,18 +11,18 @@
 1. 安裝 zsh：
 	- 先檢查 Terminal 裡是否有 zsh：
 	`zsh --version`
-	- 如果無 zsh 鍵入以下指令來安裝：
+	- 如果無 zsh 鍵入以下指令來安裝：
 	`brew install zsh zsh-completions`
 1. 安裝 oh-my-zsh:
 	- 鍵入以下指令來安裝：
 	`sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
-	- 關掉 iTerm2 重啟
+	- 關掉 iTerm2 重啟
 1. 變更樣式
 	- 開啟 zsh 設定檔，鍵入以下指令：
-	`nano ~/.zshrc` 或是到**用戶名**下的**資料夾**找 `.zshrc`檔案開啟
-	- 在設定檔中找到以下設定名：
+	`nano ~/.zshrc` 或是到**用戶名**下的**資料夾**找 `.zshrc`檔案開啟
+	- 在設定檔中找到以下設定名：
 	`ZSH_THEME="robbyrussell"` 改成 `ZSH_THEME="agnoster"`
-	- 修改後關掉 iTerm2 重啟
+	- 修改後關掉 iTerm2 重啟
 1. 安裝字體
 	- 鍵入以下指令：
 	`git clone https://github.com/powerline/fonts.git`
@@ -41,13 +41,13 @@
 ## VSCode 教學
 #### 相關連結
 - [VSCode Terminal 樣式](https://www.jazz321254.com/visual-studio-code-zsh/)
-#### 教學步驟
+#### 教學步驟
 1. 安裝 zsh：
 	- 先檢查 Terminal 裡是否有 zsh：
 	`zsh --version`
-	- 如果無 zsh 鍵入以下指令來安裝：
+	- 如果無 zsh 鍵入以下指令來安裝：
 	`brew install zsh zsh-completions`
-1. 安裝 Powerline 字型：
+1. 安裝 Powerline 字型：
 	- 安裝方式如下：
 		```
 		git clone https://github.com/powerline/fonts.git --depth=1
@@ -57,7 +57,7 @@
 		rm -rf fonts  
 		```
 1. 安裝 Powerlevel9k：
-	- 安裝方式如下：
+	- 安裝方式如下：
 		```
 		git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 		echo 'ZSH_THEME="powerlevel9k/powerlevel9k"' >> ~/.zshrc
@@ -66,7 +66,7 @@
 1. 設定 VS Code:
 	- 點選 `[喜好設定]>[設定]`（Mac快速鍵 ⌘ + ,）
 	- 選取 `[整合式終端機]`
-	- 改寫設定檔：
+	- 改寫設定檔：
 		```
 		{
 		  "terminal.integrated.fontFamily": "Source Code Pro for Powerline",
