@@ -1172,3 +1172,47 @@ echo "555 123-4567" | grep -E '^\(?[0-9]{3}\)? [0-9]{3}-[0-9]{4}$'
 
 echo "5555 123-4567" | grep -E '^\(?[0-9]{3}\)? [0-9]{3}-[0-9]{4}$'
 ```
+
+### Putting Regular Expressions To Work
+
+#### 用 grep 驗證一串電話號碼
+
+```shell
+# 產生 10 組隨機電話號碼
+for i in {1..10}; do echo "(${RANDOM:0:3}) ${RANDOM:0:3}-${RANDOM:0:4}" >> phonelist.txt; done
+
+cat phonelist.txt
+
+# 找出不符合的電話號碼
+grep -Ev '^\([0-9]{3}\) [0-9]{3}-[0-9]{4}$' phonelist.txt
+```
+
+#### 用 find 找出醜醜的檔案名稱
+
+```shell
+find . -regex '.*[^-_./0-9a-zA-Z].*'
+```
+
+#### 用 locate 找檔案
+
+```shell
+locate --regex 'bin/(bz|gz|zip)'
+```
+
+#### 使用 less 及 vim 時搜尋字串
+
+```shell
+less phonelist.txt
+# /^\([0-9]{3}\) [0-9]{3}-[0-9]{4}$
+
+vim phonelist.txt
+# /([0-9]\{3\}) [0-9]\{3\}-[0-9]\{4\}
+```
+
+zgrep 可以讀取壓縮檔案
+
+```shell
+cd /usr/share/man/man1
+
+zgrep -El 'regex|regular expression' *.gz
+```
