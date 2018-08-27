@@ -1,4 +1,4 @@
-## 11 – Processes
+# 11 – Processes
 
 現代的 OS 通常都能多工(multitasking)，快速切換不同程式，Linux kernel 透過 processes 來管理哪個程式可以使用 CPU 資源
 
@@ -15,13 +15,13 @@
 * killall – Kill processes by name
 * shutdown – Shutdown or reboot the system
 
-### How A Process Works
+## How A Process Works
 
 系統啟動後，kernel 會初始化一些 processes 及開啟程式 `init`(一連串的 schell script，位於 `/etc`)，也稱作 `init script`，用來開啟系統服務(system services)，多數的服務使用 `deamon program` 來實作(僅在背景作業，沒有 UI)
 
 process scheme: parent precess 產生 child process
 
-### Viewing Processes
+## Viewing Processes
 
 ```shell
 # TTY: Teletype 泛指可控制的 terminal, Time: CPU time
@@ -87,7 +87,7 @@ VSZ | 虛擬記憶體大小
 RSS | Resident Set Size.(RAM)
 START | process 執行的時間，超過 24 小時會用日期表示
 
-#### Viewing Processes Dynamically With top
+### Viewing Processes Dynamically With top
 
 `ps` 只會提供當下的 snapshot，即時狀態使用 `top`(預設每 3 秒更新一次)
 
@@ -95,15 +95,15 @@ START | process 執行的時間，超過 24 小時會用日期表示
 top
 ```
 
-### Controlling Processes
+## Controlling Processes
 
 用 `vim` 示範
 
-#### Interrupting A Process
+### Interrupting A Process
 
 ctrl-c(並非所有command line 都支援)
 
-#### Putting A Process In The Background
+### Putting A Process In The Background
 
 指令後方加上 `&`
 
@@ -120,7 +120,7 @@ jobs
 [1]  + suspended (tty output)  vim
 ```
 
-#### Returning A Process To The Foreground
+### Returning A Process To The Foreground
 
 ```shell
 jobs
@@ -130,7 +130,7 @@ fg %1
 [1]  + 5911 continued  vim
 ```
 
-#### Stopping (Pausing) A Process
+### Stopping (Pausing) A Process
 
 停止 foreground process: `ctrl-z`
 
@@ -152,7 +152,7 @@ fg %1
 
 foreground to the background 很實用，有時開啟從 command line 開啟圖形介面程式(graphical program)，但忘了加上 `&`
 
-### Signals
+## Signals
 
 `kill` 並不是殺掉程式，而是送出 signal
 
@@ -167,7 +167,7 @@ kill 6940
 [1]  + 6940 terminated  vim
 ```
 
-#### Sending Signals To Processes With kill
+### Sending Signals To Processes With kill
 
 ```shell
 # 格式: kill [-signal] PID...
@@ -190,7 +190,7 @@ kill -SIGINT 13608
 kill -l
 ```
 
-#### Sending Signals To Multiple Processes With killall
+### Sending Signals To Multiple Processes With killall
 
 ```shell
 # 格式: killall [-u user] [-signal] name...
