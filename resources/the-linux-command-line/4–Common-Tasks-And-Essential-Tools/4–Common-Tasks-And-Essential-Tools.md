@@ -1,10 +1,8 @@
-# 4–Common-Tasks-And-Essential-Tools
-
-## 20 – Regular Expressions
+# 20 – 正規表達式(Regular Expressions)
 
 用來表達文字的規則，可運用在找檔案、路徑，很多 CLI 及程式語言都有支援
 
-### grep
+## grep
 
 grep 來自於 `global regular expression print`
 
@@ -39,11 +37,11 @@ grep -l bzip dirlist*.txt
 grep -L bzip dirlist*.txt
 ```
 
-### Metacharacters And Literals
+## Metacharacters And Literals
 
 metacharacters: `^ $ . [ ] { } - ? * + ( ) | \`，在 regular expression 有特殊作用，要加上 `\` 才能跳脫
 
-### The Any Character
+## The Any Character
 
 `.` 代表任何字
 
@@ -51,7 +49,7 @@ metacharacters: `^ $ . [ ] { } - ? * + ( ) | \`，在 regular expression 有特�
 grep -h '.zip' dirlist*.txt
 ```
 
-### Anchor
+## Anchor
 
 1. `^`: 開頭
 2. `$`: 結尾
@@ -70,7 +68,7 @@ grep -h '^zip$' dirlist*.txt
 grep -i '^..j.r$' /usr/share/dict/words
 ```
 
-### Bracket Expressions And Character Classes
+## Bracket Expressions And Character Classes
 
 用來表示集合，會搭配 `^` 或 `-` 使用，跟原本的 metacharacter 有不同意義
 
@@ -78,7 +76,7 @@ grep -i '^..j.r$' /usr/share/dict/words
 grep -h '[bg]zip' dirlist*.txt
 ```
 
-#### Negation
+### Negation
 
 `^` 用在集合(`[]`)中表示，集合中的字不該出現
 
@@ -86,7 +84,7 @@ grep -h '[bg]zip' dirlist*.txt
 grep -h '[^bg]zip' dirlist*.txt
 ```
 
-#### Traditional Character Ranges
+### Traditional Character Ranges
 
 找開頭是大小英文的檔案
 
@@ -105,7 +103,7 @@ grep -h '[A-Z]' dirlist*.txt
 grep -h '[-AZ]' dirlist*.txt
 ```
 
-#### POSIX Character Classes
+### POSIX Character Classes
 
 早期 Unix 處理 ASCII 字元順序導致的問題
 
@@ -119,7 +117,7 @@ echo $LANG
 ls /usr/sbin/[[:upper:]]*
 ```
 
-#### Alternation
+### Alternation
 
 `A|B|C...`: A or B or C...
 
@@ -137,11 +135,11 @@ grep -Eh '^(bz|gz|zip)' dirlist*.txt
 grep -Eh '^bz|gz|zip' dirlist*.txt
 ```
 
-#### Quantifiers
+### Quantifiers
 
 量化指標
 
-##### ? - 匹配零次或一次
+#### ? - 匹配零次或一次
 
 例如以下電話格式
 
@@ -156,7 +154,7 @@ echo "555 123-4567" | grep -E '^\(?[0-9][0-9][0-9]\)? [0-9][0-9][0-9]-[0-9][0-9]
 echo "AAA 123-4567" | grep -E '^\(?[0-9][0-9][0-9]\)? [0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]$'
 ```
 
-##### * - 匹配零次或多次
+#### * - 匹配零次或多次
 
 例如判斷英文句子，第一個字母要是大小，然後有任意數量的大小寫英文字，然後 `.` 結尾
 
@@ -170,7 +168,7 @@ echo "This Works." | grep -E '[[:upper:]][[:upper:][:lower:] ]*\.'
 echo "this does not" | grep -E '[[:upper:]][[:upper:][:lower:] ]*\.'
 ```
 
-##### + - 匹配一次或多次
+#### + - 匹配一次或多次
 
 例如找尋用一個空白分隔的英文字
 
@@ -184,7 +182,7 @@ echo "a b 9" | grep -E '^([[:alpha:]]+ ?)+$'
 echo "abc  d" | grep -E '^([[:alpha:]]+ ?)+$'
 ```
 
-#### { } - 匹配特定次數
+### { } - 匹配特定次數
 
 Specifier | 說明
 ----------|---
@@ -205,9 +203,9 @@ echo "555 123-4567" | grep -E '^\(?[0-9]{3}\)? [0-9]{3}-[0-9]{4}$'
 echo "5555 123-4567" | grep -E '^\(?[0-9]{3}\)? [0-9]{3}-[0-9]{4}$'
 ```
 
-### Putting Regular Expressions To Work
+## Putting Regular Expressions To Work
 
-#### 用 grep 驗證一串電話號碼
+### 用 grep 驗證一串電話號碼
 
 ```shell
 # 產生 10 組隨機電話號碼
@@ -219,19 +217,19 @@ cat phonelist.txt
 grep -Ev '^\([0-9]{3}\) [0-9]{3}-[0-9]{4}$' phonelist.txt
 ```
 
-#### 用 find 找出醜醜的檔案名稱
+### 用 find 找出醜醜的檔案名稱
 
 ```shell
 find . -regex '.*[^-_./0-9a-zA-Z].*'
 ```
 
-#### 用 locate 找檔案
+### 用 locate 找檔案
 
 ```shell
 locate --regex 'bin/(bz|gz|zip)'
 ```
 
-#### 使用 less 及 vim 時搜尋字串
+### 使用 less 及 vim 時搜尋字串
 
 ```shell
 less phonelist.txt
