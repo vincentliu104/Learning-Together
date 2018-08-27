@@ -1,8 +1,8 @@
-## 14 – 自訂命令提示(Customizing The Prompt)
+# 14 – 自訂命令提示(Customizing The Prompt)
 
 shell prompt 具高度的可設定性
 
-### 解析命令提示(Anatomy Of A Prompt)
+## 解析命令提示(Anatomy Of A Prompt)
 
 預設命令提示的長相，不同的 linux 發行版會有不同設定
 
@@ -40,7 +40,7 @@ Sequence        Value Displayed
 \[      Signals the start of a series of one or more non-printing characters. This is used to embed non-printing control characters which manipulate the terminal emulator in some way, such as moving the cursor or changing text colors.
 \]      Signals the end of a non-printing character sequence.
 
-### Trying Some Alternate Prompt Designs
+## Trying Some Alternate Prompt Designs
 
 備份目前的設定及還原方式
 
@@ -69,7 +69,7 @@ PS1="\A \h \$ "
 PS1="<\u@\h \W>\$ "
 ```
 
-### Adding Color
+## Adding Color
 
 Escape Sequences Used To Set Text Colors
 Sequence | Text | Color Sequence | Text Color
@@ -104,7 +104,7 @@ Sequence | Background Color | Sequence | Background Color
 <me@linuxbox ~>$ PS1="\[\033[0;41m\]<\u@\h \W>\$\[\033[0m\] "
 ```
 
-### Moving The Cursor
+## Moving The Cursor
 
 Cursor Movement Escape Sequences
 Escape Code | Action
@@ -126,7 +126,7 @@ PS1="\[\033[s\033[0;0H\033[0;41m\033[K\033[1;33m\t\033[0m\033[u\]
 <\u@\h \W>\$ "
 ```
 
-### Saving The Prompt
+## Saving The Prompt
 
 不想每次都要設定 PS1，可以加到 `.bashrc`
 
