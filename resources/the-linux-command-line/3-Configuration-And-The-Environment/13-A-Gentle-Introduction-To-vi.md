@@ -26,7 +26,7 @@
     - [Copying Content From One File Into Another](#copying-content-from-one-file-into-another)
     - [Inserting An Entire File Into Another](#inserting-an-entire-file-into-another)
   - [儲存(Saving Our Work)](#%E5%84%B2%E5%AD%98saving-our-work)
-  - [更多介紹](#%E6%9B%B4%E5%A4%9A%E4%BB%8B%E7%B4%B9)
+  - [延伸閱讀](#%E5%BB%B6%E4%BC%B8%E9%96%B1%E8%AE%80)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -269,7 +269,7 @@ vi ls-output.txt
 :w foo1.txt
 ```
 
-## 更多介紹
+## 延伸閱讀
 
 - [Learning The vi Editor](http://en.wikibooks.org/wiki/Vi) A Wikibook from Wikipedia that offers a concise guide to vi and several of its work-a-likes including vim
 - [The Vim Book](ftp://ftp.vim.org/pub/vim/doc/book/vimbook-OPL.pdf) The vim project has a 570-page book that covers (almost) all of the features in vim.

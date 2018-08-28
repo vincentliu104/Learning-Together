@@ -11,7 +11,7 @@
   - [Secure Communication With Remote Hosts](#secure-communication-with-remote-hosts)
     - [ssh(Secure Shell)](#sshsecure-shell)
     - [scp And sftp](#scp-and-sftp)
-  - [Further Reading](#further-reading)
+  - [延伸閱讀](#%E5%BB%B6%E4%BC%B8%E9%96%B1%E8%AE%80)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -249,7 +249,7 @@ sftp> bye
 
 SSH Client for Windows 可以使用 [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/)
 
-## Further Reading
+## 延伸閱讀
 
 [Linux Network Administrator’s Guide](http://tldp.org/LDP/nag2/index.html)
 
