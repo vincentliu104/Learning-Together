@@ -28,30 +28,31 @@ shell prompt 具高度的可設定性
 
 Escape Codes Used In Shell Prompts
 
-Sequence        Value Displayed
-\a      ASCII bell. 會讓電腦逼一聲
-\d      目前日期 For example, “Mon May 26.”
-\h      Host name of the local machine minus the trailing domain name.
-\H      Full host name.
-\j      Number of jobs running in the current shell session.
-\l      Name of the current terminal device.
-\n      A newline character.
-\r      A carriage return.
-\s      Name of the shell program.
-\t      目前時間 in 24 hour hours:minutes:seconds format.
-\T      目前時間 in 12 hour format.
-\@      目前時間 in 12 hour AM/PM format.
-\A      目前時間 in 24 hour hours:minutes format.
-\u      User name of the current user.
-\v      Version number of the shell.
-\V      Version and release numbers of the shell.
-\w      Name of the current working directory.
-\W      Last part of the current working directory name.
-\!      History number of the current command.
-\#      Number of commands entered into this shell session.
-\$      This displays a “$” character unless you have superuser privileges. In that case, it displays a “#” instead.
-\[      Signals the start of a series of one or more non-printing characters. This is used to embed non-printing control characters which manipulate the terminal emulator in some way, such as moving the cursor or changing text colors.
-\]      Signals the end of a non-printing character sequence.
+Sequence | Value Displayed
+---------|----------------
+\a | ASCII bell. 會讓電腦逼一聲
+\d | 目前日期 For example, “Mon May 26.”
+\h | Host name of the local machine minus the trailing domain name.
+\H | Full host name.
+\j | Number of jobs running in the current shell session.
+\l | Name of the current terminal device.
+\n | A newline character.
+\r | A carriage return.
+\s | Name of the shell program.
+\t | 目前時間 in 24 hour hours:minutes:seconds format.
+\T | 目前時間 in 12 hour format.
+\@ | 目前時間 in 12 hour AM/PM format.
+\A | 目前時間 in 24 hour hours:minutes format.
+\u | User name of the current user.
+\v | Version number of the shell.
+\V | Version and release numbers of the shell.
+\w | Name of the current working directory.
+\W | Last part of the current working directory name.
+\! | History number of the current command.
+\# | Number of commands entered into this shell session.
+\$ | This displays a “$” character unless you have superuser privileges. In that case, it displays a “#” instead.
+\[ | Signals the start of a series of one or more non-printing characters. This is used to embed non-printing control characters which manipulate the terminal emulator in some way, such as moving the cursor or changing text colors.
+\] | Signals the end of a non-printing character sequence.
 
 ## Trying Some Alternate Prompt Designs
 
@@ -85,6 +86,7 @@ PS1="<\u@\h \W>\$ "
 ## Adding Color
 
 Escape Sequences Used To Set Text Colors
+
 Sequence | Text | Color Sequence | Text Color
 ---------|------|----------------|-----------
 \033[0;30m | Black | \033[1;30m | Dark Gray
@@ -120,6 +122,7 @@ Sequence | Background Color | Sequence | Background Color
 ## Moving The Cursor
 
 Cursor Movement Escape Sequences
+
 Escape Code | Action
 ------------|-------
 \033[l;cH | Move the cursor to line l and column c.
