@@ -8,10 +8,10 @@
   - [cp](#cp)
   - [mv](#mv)
   - [rm](#rm)
-- [ln](#ln)
-  - [Hard links](#hard-links)
-  - [Symbolic Links](#symbolic-links)
-  - [playground](#playground)
+  - [ln](#ln)
+    - [Hard links](#hard-links)
+    - [Symbolic Links](#symbolic-links)
+    - [playground](#playground)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
