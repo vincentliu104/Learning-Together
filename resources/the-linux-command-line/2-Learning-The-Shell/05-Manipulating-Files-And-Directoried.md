@@ -88,14 +88,14 @@ rm -r file1 dir1
 rm -rf file1 dir1 # 檔案或目錄不存在實會安靜的刪除
 ```
 
-# ln
+## ln
 
 ```shell
 ln file link # hrad link
 ln -s item link # symbolic link, item 可以是檔案或目錄
 ```
 
-## Hard links
+### Hard links
 
 難以辨認
 
@@ -104,13 +104,13 @@ ln -s item link # symbolic link, item 可以是檔案或目錄
 1. 只能參照相同磁碟的檔案
 2. 不能參照目錄
 
-## Symbolic Links
+### Symbolic Links
 
 特殊型態的檔案，指標指向檔案或目錄，類似 Windows 中的捷徑
 
 如果參照的檔案或目錄先被刪除，會形成 broken link
 
-## playground
+### playground
 
 ```shell
 # Creating Directories
