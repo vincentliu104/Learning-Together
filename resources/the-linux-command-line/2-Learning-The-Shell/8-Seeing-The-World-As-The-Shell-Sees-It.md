@@ -1,3 +1,22 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [8 – Seeing The World As The Shell Sees It](#8--seeing-the-world-as-the-shell-sees-it)
+  - [Expansion](#expansion)
+    - [Pathname Expansion](#pathname-expansion)
+    - [Tilde Expansion](#tilde-expansion)
+    - [Arithmetic Expansion](#arithmetic-expansion)
+    - [Brace Expansion](#brace-expansion)
+    - [Parameter Expansion](#parameter-expansion)
+    - [Command Substitution](#command-substitution)
+  - [Quoting](#quoting)
+    - [Double Quotes](#double-quotes)
+    - [Single Quotes](#single-quotes)
+    - [Escaping Characters](#escaping-characters)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # 8 – Seeing The World As The Shell Sees It
 
 `echo`: 顯示一行字

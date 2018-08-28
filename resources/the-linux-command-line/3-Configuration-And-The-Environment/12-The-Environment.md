@@ -1,3 +1,18 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [12 – The Environment](#12--the-environment)
+  - [What Is Stored In The Environment](#what-is-stored-in-the-environment)
+    - [Examining The Environment](#examining-the-environment)
+    - [Some Interesting Variables](#some-interesting-variables)
+  - [How Is The Environment Established](#how-is-the-environment-established)
+    - [What's In A Startup File](#whats-in-a-startup-file)
+  - [Modifying The Environment](#modifying-the-environment)
+    - [Activating Our Changes](#activating-our-changes)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # 12 – The Environment
 
 環境所存的資料有時會被程式拿來做判斷用，多數程式會有自己的設定檔，少數則依賴於環境變數

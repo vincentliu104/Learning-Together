@@ -1,3 +1,35 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [13 – A Gentle Introduction To vi](#13--a-gentle-introduction-to-vi)
+  - [Why We Should Learn vi](#why-we-should-learn-vi)
+  - [A Little Background](#a-little-background)
+  - [Starting And Stopping vi](#starting-and-stopping-vi)
+  - [Editing Modes](#editing-modes)
+    - [Entering Insert Mode](#entering-insert-mode)
+    - [Saving Our Work](#saving-our-work)
+    - [移動游標(Moving The Cursor Around)](#%E7%A7%BB%E5%8B%95%E6%B8%B8%E6%A8%99moving-the-cursor-around)
+  - [Basic Editing](#basic-editing)
+    - [Appending Text](#appending-text)
+    - [新增一行(Opening A Line)](#%E6%96%B0%E5%A2%9E%E4%B8%80%E8%A1%8Copening-a-line)
+    - [刪除文字(Deleting Text)](#%E5%88%AA%E9%99%A4%E6%96%87%E5%AD%97deleting-text)
+  - [剪下、複製、貼上(Cutting, Copying And Pasting Text)](#%E5%89%AA%E4%B8%8B%E8%A4%87%E8%A3%BD%E8%B2%BC%E4%B8%8Acutting-copying-and-pasting-text)
+    - [Joining Lines](#joining-lines)
+  - [搜尋與取代(Search And Replace)](#%E6%90%9C%E5%B0%8B%E8%88%87%E5%8F%96%E4%BB%A3search-and-replace)
+    - [Searching Within A Line](#searching-within-a-line)
+    - [Searching The Entire File](#searching-the-entire-file)
+    - [Global Search And Replace](#global-search-and-replace)
+  - [Editing Multiple Files](#editing-multiple-files)
+    - [切換檔案(Switching Between Files)](#%E5%88%87%E6%8F%9B%E6%AA%94%E6%A1%88switching-between-files)
+    - [開啟額外檔案(Opening Additional Files For Editing)](#%E9%96%8B%E5%95%9F%E9%A1%8D%E5%A4%96%E6%AA%94%E6%A1%88opening-additional-files-for-editing)
+    - [Copying Content From One File Into Another](#copying-content-from-one-file-into-another)
+    - [Inserting An Entire File Into Another](#inserting-an-entire-file-into-another)
+  - [儲存(Saving Our Work)](#%E5%84%B2%E5%AD%98saving-our-work)
+  - [更多介紹](#%E6%9B%B4%E5%A4%9A%E4%BB%8B%E7%B4%B9)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # 13 – A Gentle Introduction To vi
 
 vi 包含在 vim 中

@@ -1,3 +1,17 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [19 – 封存及備份(Archiving And Backup)](#19--%E5%B0%81%E5%AD%98%E5%8F%8A%E5%82%99%E4%BB%BDarchiving-and-backup)
+  - [gzip](#gzip)
+    - [bzip2](#bzip2)
+  - [封存檔案(Archiving Files)](#%E5%B0%81%E5%AD%98%E6%AA%94%E6%A1%88archiving-files)
+    - [tar](#tar)
+    - [zip](#zip)
+  - [同步檔案及資料夾(Synchronizing Files And Directories)](#%E5%90%8C%E6%AD%A5%E6%AA%94%E6%A1%88%E5%8F%8A%E8%B3%87%E6%96%99%E5%A4%BEsynchronizing-files-and-directories)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # 19 – 封存及備份(Archiving And Backup)
 
 在不同裝置間移動檔案時使用

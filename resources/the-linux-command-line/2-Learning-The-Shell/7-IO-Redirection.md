@@ -1,3 +1,18 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [7 – 資料流重導向(I/O Redirection)](#7--%E8%B3%87%E6%96%99%E6%B5%81%E9%87%8D%E5%B0%8E%E5%90%91io-redirection)
+  - [Redirect Standard Output](#redirect-standard-output)
+  - [Redirecting Standard Error](#redirecting-standard-error)
+    - [Redirecting Standard Output And Standard Error To One File](#redirecting-standard-output-and-standard-error-to-one-file)
+    - [Disposing Of Unwanted Output](#disposing-of-unwanted-output)
+  - [Redirecting Standard Input](#redirecting-standard-input)
+  - [Pipelines](#pipelines)
+  - [Filters](#filters)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # 7 – 資料流重導向(I/O Redirection)
 
 最酷俊帥的指令，可以把指令的結果寫到檔案、結合指令(piplines)

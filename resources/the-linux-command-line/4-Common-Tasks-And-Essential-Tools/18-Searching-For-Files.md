@@ -1,3 +1,21 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [18 – 檔案搜尋(Searching For Files)](#18--%E6%AA%94%E6%A1%88%E6%90%9C%E5%B0%8Bsearching-for-files)
+  - [locate – Find Files The Easy Way](#locate--find-files-the-easy-way)
+  - [find – Find Files The Hard Way](#find--find-files-the-hard-way)
+    - [Tests](#tests)
+    - [Operators](#operators)
+    - [Predefined Actions](#predefined-actions)
+    - [User Defined Actions](#user-defined-actions)
+    - [Improving Efficiency](#improving-efficiency)
+    - [xargs](#xargs)
+    - [A Return To The Playground](#a-return-to-the-playground)
+    - [Options](#options)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # 18 – 檔案搜尋(Searching For Files)
 
 Linux 系統上有很多檔案，要怎麼找到你要的檔案呢？本章將介紹幾個找檔案的指令

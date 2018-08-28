@@ -1,3 +1,30 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [20 – 正規表達式(Regular Expressions)](#20--%E6%AD%A3%E8%A6%8F%E8%A1%A8%E9%81%94%E5%BC%8Fregular-expressions)
+  - [grep](#grep)
+  - [Metacharacters And Literals](#metacharacters-and-literals)
+  - [The Any Character](#the-any-character)
+  - [Anchor](#anchor)
+  - [Bracket Expressions And Character Classes](#bracket-expressions-and-character-classes)
+    - [Negation](#negation)
+    - [Traditional Character Ranges](#traditional-character-ranges)
+    - [POSIX Character Classes](#posix-character-classes)
+    - [Alternation](#alternation)
+    - [Quantifiers](#quantifiers)
+      - [? - 匹配零次或一次](#---%E5%8C%B9%E9%85%8D%E9%9B%B6%E6%AC%A1%E6%88%96%E4%B8%80%E6%AC%A1)
+      - [* - 匹配零次或多次](#---%E5%8C%B9%E9%85%8D%E9%9B%B6%E6%AC%A1%E6%88%96%E5%A4%9A%E6%AC%A1)
+      - [+ - 匹配一次或多次](#---%E5%8C%B9%E9%85%8D%E4%B8%80%E6%AC%A1%E6%88%96%E5%A4%9A%E6%AC%A1)
+    - [{ } - 匹配特定次數](#----%E5%8C%B9%E9%85%8D%E7%89%B9%E5%AE%9A%E6%AC%A1%E6%95%B8)
+  - [Putting Regular Expressions To Work](#putting-regular-expressions-to-work)
+    - [用 grep 驗證一串電話號碼](#%E7%94%A8-grep-%E9%A9%97%E8%AD%89%E4%B8%80%E4%B8%B2%E9%9B%BB%E8%A9%B1%E8%99%9F%E7%A2%BC)
+    - [用 find 找出醜醜的檔案名稱](#%E7%94%A8-find-%E6%89%BE%E5%87%BA%E9%86%9C%E9%86%9C%E7%9A%84%E6%AA%94%E6%A1%88%E5%90%8D%E7%A8%B1)
+    - [用 locate 找檔案](#%E7%94%A8-locate-%E6%89%BE%E6%AA%94%E6%A1%88)
+    - [使用 less 及 vim 時搜尋字串](#%E4%BD%BF%E7%94%A8-less-%E5%8F%8A-vim-%E6%99%82%E6%90%9C%E5%B0%8B%E5%AD%97%E4%B8%B2)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # 20 – 正規表達式(Regular Expressions)
 
 用來表達文字的規則，可運用在找檔案、路徑，很多 CLI 及程式語言都有支援

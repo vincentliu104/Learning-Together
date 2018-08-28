@@ -1,3 +1,22 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [11 – Processes](#11--processes)
+  - [How A Process Works](#how-a-process-works)
+  - [Viewing Processes](#viewing-processes)
+    - [Viewing Processes Dynamically With top](#viewing-processes-dynamically-with-top)
+  - [Controlling Processes](#controlling-processes)
+    - [Interrupting A Process](#interrupting-a-process)
+    - [Putting A Process In The Background](#putting-a-process-in-the-background)
+    - [Returning A Process To The Foreground](#returning-a-process-to-the-foreground)
+    - [Stopping (Pausing) A Process](#stopping-pausing-a-process)
+  - [Signals](#signals)
+    - [Sending Signals To Processes With kill](#sending-signals-to-processes-with-kill)
+    - [Sending Signals To Multiple Processes With killall](#sending-signals-to-multiple-processes-with-killall)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # 11 – Processes
 
 現代的 OS 通常都能多工(multitasking)，快速切換不同程式，Linux kernel 透過 processes 來管理哪個程式可以使用 CPU 資源

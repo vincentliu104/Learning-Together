@@ -1,3 +1,20 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [5 – 檔案及目錄操作(Manipulating Files And Directoried)](#5--%E6%AA%94%E6%A1%88%E5%8F%8A%E7%9B%AE%E9%8C%84%E6%93%8D%E4%BD%9Cmanipulating-files-and-directoried)
+  - [萬用字元(wildcard or globbing)](#%E8%90%AC%E7%94%A8%E5%AD%97%E5%85%83wildcard-or-globbing)
+  - [mkdir](#mkdir)
+  - [cp](#cp)
+  - [mv](#mv)
+  - [rm](#rm)
+- [ln](#ln)
+  - [Hard links](#hard-links)
+  - [Symbolic Links](#symbolic-links)
+  - [playground](#playground)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # 5 – 檔案及目錄操作(Manipulating Files And Directoried)
 
 主要介紹指令

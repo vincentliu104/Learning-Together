@@ -1,3 +1,14 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [6 – Working With Commands](#6--working-with-commands)
+  - [識別指令(Identifying Commands)](#%E8%AD%98%E5%88%A5%E6%8C%87%E4%BB%A4identifying-commands)
+  - [查看指令文件](#%E6%9F%A5%E7%9C%8B%E6%8C%87%E4%BB%A4%E6%96%87%E4%BB%B6)
+  - [建立別名](#%E5%BB%BA%E7%AB%8B%E5%88%A5%E5%90%8D)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # 6 – Working With Commands
 
 comman 可分作四類

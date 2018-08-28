@@ -1,3 +1,18 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [9 – 進階鍵盤操作(Advanced Keyboard Tricks)](#9--%E9%80%B2%E9%9A%8E%E9%8D%B5%E7%9B%A4%E6%93%8D%E4%BD%9Cadvanced-keyboard-tricks)
+  - [Command Line Editing](#command-line-editing)
+    - [Cursor Movement](#cursor-movement)
+    - [Modifying Text](#modifying-text)
+    - [Cutting And Pasting (Killing And Yanking) Text](#cutting-and-pasting-killing-and-yanking-text)
+  - [Completion](#completion)
+  - [Using History](#using-history)
+    - [History Expansion](#history-expansion)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # 9 – 進階鍵盤操作(Advanced Keyboard Tricks)
 
 作者指出 Unix 是給喜歡打指令的人用的，但人通常很懶得打字，不然怎們會有指令叫做 `cp`, `ls`, `mv`

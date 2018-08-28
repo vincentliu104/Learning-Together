@@ -1,3 +1,16 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [14 – 自訂命令提示(Customizing The Prompt)](#14--%E8%87%AA%E8%A8%82%E5%91%BD%E4%BB%A4%E6%8F%90%E7%A4%BAcustomizing-the-prompt)
+  - [解析命令提示(Anatomy Of A Prompt)](#%E8%A7%A3%E6%9E%90%E5%91%BD%E4%BB%A4%E6%8F%90%E7%A4%BAanatomy-of-a-prompt)
+  - [Trying Some Alternate Prompt Designs](#trying-some-alternate-prompt-designs)
+  - [Adding Color](#adding-color)
+  - [Moving The Cursor](#moving-the-cursor)
+  - [Saving The Prompt](#saving-the-prompt)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # 14 – 自訂命令提示(Customizing The Prompt)
 
 shell prompt 具高度的可設定性

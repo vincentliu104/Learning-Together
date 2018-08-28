@@ -1,3 +1,21 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [10 – 權限 (Permissions)](#10--%E6%AC%8A%E9%99%90-permissions)
+  - [Owners, Group Members, And Everybody Else](#owners-group-members-and-everybody-else)
+  - [Reading, Writing, And Executing](#reading-writing-and-executing)
+  - [chmod – Change file mode](#chmod--change-file-mode)
+  - [umask – Set Default Permissions](#umask--set-default-permissions)
+  - [Changing Identities](#changing-identities)
+    - [su – Run A Shell With Substitute User And Group IDs](#su--run-a-shell-with-substitute-user-and-group-ids)
+    - [sudo – Execute A Command As Another User](#sudo--execute-a-command-as-another-user)
+    - [chown – Change File Owner And Group](#chown--change-file-owner-and-group)
+    - [chgrp – Change Group Ownership](#chgrp--change-group-ownership)
+    - [Changing Your Password](#changing-your-password)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # 10 – 權限 (Permissions)
 
 Unix 可提供多位 user 透過 ssh(secure shell) 同時使用，因此需要有控管機制，避免 user 間相互影響

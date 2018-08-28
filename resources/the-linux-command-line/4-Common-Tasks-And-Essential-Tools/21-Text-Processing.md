@@ -1,3 +1,26 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [21-Text-Processing](#21-text-processing)
+  - [Applications Of Text](#applications-of-text)
+  - [Revisiting Some Old Friends](#revisiting-some-old-friends)
+    - [cat](#cat)
+    - [sort](#sort)
+    - [uniq](#uniq)
+  - [Slicing And Dicing](#slicing-and-dicing)
+  - [Comparing Text](#comparing-text)
+    - [comm](#comm)
+    - [diff](#diff)
+    - [patch](#patch)
+  - [Editing On The Fly](#editing-on-the-fly)
+    - [tr](#tr)
+    - [sed](#sed)
+    - [aspell](#aspell)
+  - [延伸閱讀](#%E5%BB%B6%E4%BC%B8%E9%96%B1%E8%AE%80)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # 21-Text-Processing
 
 主要介紹指令
@@ -349,14 +372,14 @@ cat foo.txt
 
 ## 延伸閱讀
 
-* [GNU Coreutils](http://www.gnu.org/software/coreutils/manual/coreutils.html#Output-of-entire-files)
-* [GNU Coreutils](http://www.gnu.org/software/coreutils/manual/coreutils.html#Operating-on-sorted-files)
-* [GNU Coreutils](http://www.gnu.org/software/coreutils/manual/coreutils.html#Operating-on-sorted-files)
-* [GNU Coreutils](http://www.gnu.org/software/coreutils/manual/coreutils.html#Operating-on-characters)
-* [Comparing and Merging Files](http://www.gnu.org/software/diffutils/manual/html_mono/diff.html)
-* [sed, a stream editor](http://www.gnu.org/software/sed/manual/sed.html)
-* [GNU Aspell 0.60.7-pre: Top](http://aspell.net/man-html/index.html)
-* [Sed - An Introduction and Tutorial](http://www.grymoire.com/Unix/Sed.html)
-* [USEFUL ONE-LINE SCRIPTS FOR SED (Unix stream editor)](http://sed.sourceforge.net/sed1line.txt)
-* google “sed one liners”, “sed cheat sheets”
-* 更多指令: split, csplit, sdiff
+- [GNU Coreutils](http://www.gnu.org/software/coreutils/manual/coreutils.html#Output-of-entire-files)
+- [GNU Coreutils](http://www.gnu.org/software/coreutils/manual/coreutils.html#Operating-on-sorted-files)
+- [GNU Coreutils](http://www.gnu.org/software/coreutils/manual/coreutils.html#Operating-on-sorted-files)
+- [GNU Coreutils](http://www.gnu.org/software/coreutils/manual/coreutils.html#Operating-on-characters)
+- [Comparing and Merging Files](http://www.gnu.org/software/diffutils/manual/html_mono/diff.html)
+- [sed, a stream editor](http://www.gnu.org/software/sed/manual/sed.html)
+- [GNU Aspell 0.60.7-pre: Top](http://aspell.net/man-html/index.html)
+- [Sed - An Introduction and Tutorial](http://www.grymoire.com/Unix/Sed.html)
+- [USEFUL ONE-LINE SCRIPTS FOR SED (Unix stream editor)](http://sed.sourceforge.net/sed1line.txt)
+- google “sed one liners”, “sed cheat sheets”
+- 更多指令: split, csplit, sdiff

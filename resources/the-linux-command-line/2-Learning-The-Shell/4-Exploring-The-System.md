@@ -1,3 +1,16 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [4 – 探索系統(Exploring The System)](#4--%E6%8E%A2%E7%B4%A2%E7%B3%BB%E7%B5%B1exploring-the-system)
+  - [ls](#ls)
+  - [less is more](#less-is-more)
+  - [探索目錄](#%E6%8E%A2%E7%B4%A2%E7%9B%AE%E9%8C%84)
+  - [Symbolic Links(也被稱作 soft link 或 symlink)](#symbolic-links%E4%B9%9F%E8%A2%AB%E7%A8%B1%E4%BD%9C-soft-link-%E6%88%96-symlink)
+  - [Hard Links](#hard-links)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # 4 – 探索系統(Exploring The System)
 
 主要介紹指令

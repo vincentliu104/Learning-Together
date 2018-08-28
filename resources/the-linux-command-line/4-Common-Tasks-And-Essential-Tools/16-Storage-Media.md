@@ -1,3 +1,16 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [16 – Storage Media](#16--storage-media)
+  - [Mounting And Unmounting Storage Devices](#mounting-and-unmounting-storage-devices)
+    - [Viewing A List Of Mounted File Systems](#viewing-a-list-of-mounted-file-systems)
+    - [Determining Device Names](#determining-device-names)
+  - [Creating New File Systems](#creating-new-file-systems)
+    - [Manipulating Partitions With fdisk](#manipulating-partitions-with-fdisk)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # 16 – Storage Media
 
 指令介紹

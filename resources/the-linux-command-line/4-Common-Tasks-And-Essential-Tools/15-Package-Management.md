@@ -1,3 +1,28 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [15 – 套件管理(Package Management)](#15--%E5%A5%97%E4%BB%B6%E7%AE%A1%E7%90%86package-management)
+  - [套件系統(Packaging Systems)](#%E5%A5%97%E4%BB%B6%E7%B3%BB%E7%B5%B1packaging-systems)
+  - [How A Package System Works](#how-a-package-system-works)
+    - [Package Files](#package-files)
+    - [Repositories](#repositories)
+    - [Dependencies](#dependencies)
+    - [High And Low-level Package Tools](#high-and-low-level-package-tools)
+  - [Common Package Management Tasks](#common-package-management-tasks)
+    - [Finding A Package In A Repository](#finding-a-package-in-a-repository)
+    - [Installing A Package From A Repository](#installing-a-package-from-a-repository)
+    - [Installing A Package From A Package File](#installing-a-package-from-a-package-file)
+    - [Removing A Package](#removing-a-package)
+    - [Updating Packages From A Repository](#updating-packages-from-a-repository)
+    - [Upgrading A Package From A Package File](#upgrading-a-package-from-a-package-file)
+    - [Listing Installed Packages](#listing-installed-packages)
+    - [Determining If A Package Is Installed](#determining-if-a-package-is-installed)
+    - [Displaying Info About An Installed Package](#displaying-info-about-an-installed-package)
+    - [Finding Which Package Installed A File](#finding-which-package-installed-a-file)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # 15 – 套件管理(Package Management)
 
 Mac 使用 [Homebrew](https://brew.sh/index_zh-tw)
