@@ -19,19 +19,19 @@
 
 Linux 被用來建立各種網路系統及設備，例如防火牆(firewall)、路由器(router)、域名伺服器(name server)、NAS(network attached storage)，這裡僅會介紹較頻繁使用的指令
 
-* `ping` - Send an ICMP ECHO_REQUEST to network hosts
-* `traceroute` - Print the route packets trace to a network host
-* `netstat` - Print network connections, routing tables, interface statistics,
-* masquerade connections, and multicast memberships
-* `ftp` - Internet file transfer program
-* `wget` - Non-interactive network downloader
-* `ssh` - OpenSSH SSH client (remote login program)
+- `ping` - Send an ICMP ECHO_REQUEST to network hosts
+- `traceroute` - Print the route packets trace to a network host
+- `netstat` - Print network connections, routing tables, interface statistics,
+- masquerade connections, and multicast memberships
+- `ftp` - Internet file transfer program
+- `wget` - Non-interactive network downloader
+- `ssh` - OpenSSH SSH client (remote login program)
 
 你必須懂的名詞
 
-* IP (Internet Protocol) address
-* Host and domain name
-* URI (Uniform Resource Identifier)
+- IP (Internet Protocol) address
+- Host and domain name
+- URI (Uniform Resource Identifier)
 
 ## 檢驗及監控網路(Examining And Monitoring A Network)
 
@@ -118,8 +118,8 @@ collisions:0 txqueuelen:0
 RX bytes:111490 (108.8 KB) TX bytes:111490 (108.8 KB)
 ```
 
-* `UP` - 用來看網路卡有沒啟用
-* `inet addr` - IP address
+- `UP` - 用來看網路卡有沒啟用
+- `inet addr` - IP address
 
 kernel’s network routing table
 
@@ -132,10 +132,10 @@ Destination Gateway Genmask Flags MSS Window irtt Iface
 default 192.168.1.1 0.0.0.0 UG 0 0 0 eth0
 ```
 
-* IP address - 最後一碼為 0，表示他是 LAN 上的 host
-* Gateway - gateway(router) 的名稱或 IP
-* 有標示 `*` 表示不需要 gateway
-* Destination default - 沒列出來的都走這條
+- IP address - 最後一碼為 0，表示他是 LAN 上的 host
+- Gateway - gateway(router) 的名稱或 IP
+- 有標示 `*` 表示不需要 gateway
+- Destination default - 沒列出來的都走這條
 
 ### wget
 
@@ -255,6 +255,6 @@ SSH Client for Windows 可以使用 [PuTTY](https://www.chiark.greenend.org.uk/~
 
 Wikipedia contains many good networking articles. Here are some of the basics:
 
-* <http://en.wikipedia.org/wiki/Internet_protocol_address>
-* <http://en.wikipedia.org/wiki/Host_name>
-* <http://en.wikipedia.org/wiki/Uniform_Resource_Identifier>
+- <http://en.wikipedia.org/wiki/Internet_protocol_address>
+- <http://en.wikipedia.org/wiki/Host_name>
+- <http://en.wikipedia.org/wiki/Uniform_Resource_Identifier>

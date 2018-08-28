@@ -27,7 +27,7 @@ ls -a | # 包含隱藏檔案
 
 重要資訊
 
-* 檔案名稱以 `.` 開頭的是隱藏檔，你的 `home` 目錄有滿多的
-* 檔案名稱與指令是區分大小寫(case sensitive)
-* Linux 沒有副檔名(file extension)的概念，對些許 application 才有意義
-* 檔案名稱可包含標點符號及空白，千萬不要使用空白，萬不得已建議改用 underscore
+- 檔案名稱以 `.` 開頭的是隱藏檔，你的 `home` 目錄有滿多的
+- 檔案名稱與指令是區分大小寫(case sensitive)
+- Linux 沒有副檔名(file extension)的概念，對些許 application 才有意義
+- 檔案名稱可包含標點符號及空白，千萬不要使用空白，萬不得已建議改用 underscore

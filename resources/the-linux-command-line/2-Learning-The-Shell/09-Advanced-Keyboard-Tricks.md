@@ -19,8 +19,8 @@
 
 本篇會介紹的指令
 
-* `clear`
-* `history`
+- `clear`
+- `history`
 
 ## Command Line Editing
 

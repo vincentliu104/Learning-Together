@@ -133,9 +133,9 @@ a | 簡寫 “all.” 組合 “u”, “g”, and “o”.
 
 `umask` 控制了檔案新增時給予的權限，使用 8 進位數字表示
 
-* Original file mode: `--- rw- rw- rw-`
-* Mask: `000 000 000 010`
-* Result: `--- rw- rw- r--`
+- Original file mode: `--- rw- rw- rw-`
+- Mask: `000 000 000 010`
+- Result: `--- rw- rw- r--`
 
 ## Changing Identities
 

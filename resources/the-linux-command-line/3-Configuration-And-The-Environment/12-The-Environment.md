@@ -19,10 +19,10 @@
 
 指令介紹
 
-* `printenv`: 列出環境變數
-* `set`: 設定 shell 選項, 觀察所有變數
-* `export`: 自訂變數轉成環境變數
-* `alias`: 設定指令別名
+- `printenv`: 列出環境變數
+- `set`: 設定 shell 選項, 觀察所有變數
+- `export`: 自訂變數轉成環境變數
+- `alias`: 設定指令別名
 
 ## What Is Stored In The Environment
 
@@ -31,8 +31,8 @@
 
 ### Examining The Environment
 
-* `set`: shell + environment variables
-* `printenv`: environment variable
+- `set`: shell + environment variables
+- `printenv`: environment variable
 
 可用 `echo` 查看變數
 

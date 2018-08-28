@@ -25,26 +25,26 @@
 
 主要介紹指令
 
-* cat
-* sort
-* uniq
-* cut
-* paste
-* join
-* comm
-* diff
-* patch
-* tr
-* sed
-* aspell
+- cat
+- sort
+- uniq
+- cut
+- paste
+- join
+- comm
+- diff
+- patch
+- tr
+- sed
+- aspell
 
 ## Applications Of Text
 
-* 文件(Documents)
-* 網頁(Web pages)
-* Email
-* 列印輸出(Printer Output)
-* 程式原始碼(Program Source Code)
+- 文件(Documents)
+- 網頁(Web pages)
+- Email
+- 列印輸出(Printer Output)
+- 程式原始碼(Program Source Code)
 
 ## Revisiting Some Old Friends
 
@@ -52,9 +52,9 @@
 
 option
 
-* -A 可以用來顯示無法列印的字元，比如說 Tab、多餘的空白
-* -n 印出行號
-* -s 去除多餘換行
+- -A 可以用來顯示無法列印的字元，比如說 Tab、多餘的空白
+- -n 印出行號
+- -s 去除多餘換行
 
 Ctrl-d 指示 cat 已經輸入完了
 
@@ -80,8 +80,8 @@ jumped over the lazy dog.
 
 MS-DOS Text Vs. Unix Text 行尾處理
 
-* Unix 使用 linefeed character (ASCII 10)
-* MS-DOS, Windows 使用 sequence carriage return (ASCII 13) and linefeed
+- Unix 使用 linefeed character (ASCII 10)
+- MS-DOS, Windows 使用 sequence carriage return (ASCII 13) and linefeed
 
 ### sort
 

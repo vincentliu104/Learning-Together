@@ -18,17 +18,17 @@
 
 檔案處理
 
-* `gzip` – Compress or expand files
-* `bzip2` – A block sorting file compressor
+- `gzip` – Compress or expand files
+- `bzip2` – A block sorting file compressor
 
 封存
 
-* `tar` – Tape archiving utility
-* `zip` – Package and compress files
+- `tar` – Tape archiving utility
+- `zip` – Package and compress files
 
 遠端同步
 
-* `rsync` – Remote file and directory synchronization
+- `rsync` – Remote file and directory synchronization
 
 壓縮檔案(Compressing Files)
 

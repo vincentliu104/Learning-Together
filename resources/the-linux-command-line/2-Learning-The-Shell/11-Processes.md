@@ -25,14 +25,14 @@
 
 主要介紹指令
 
-* ps – Report a snapshot of current processes
-* top – Display tasks
-* jobs – List active jobs
-* bg – Place a job in the background
-* fg – Place a job in the foreground
-* kill – Send a signal to a process
-* killall – Kill processes by name
-* shutdown – Shutdown or reboot the system
+- ps – Report a snapshot of current processes
+- top – Display tasks
+- jobs – List active jobs
+- bg – Place a job in the background
+- fg – Place a job in the foreground
+- kill – Send a signal to a process
+- killall – Kill processes by name
+- shutdown – Shutdown or reboot the system
 
 ## How A Process Works
 
@@ -175,8 +175,8 @@ foreground to the background 很實用，有時開啟從 command line 開啟圖�
 
 `kill` 並不是殺掉程式，而是送出 signal
 
-* `Ctrl-c`: INT (Interrupt)
-* `Ctrl-z`: TSTP(Terminal Stop.)
+- `Ctrl-c`: INT (Interrupt)
+- `Ctrl-z`: TSTP(Terminal Stop.)
 
 ```shell
 vim &

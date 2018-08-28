@@ -19,11 +19,11 @@
 
 主要介紹指令
 
-* `cp`: 複製檔案及目錄
-* `mv`: 移動/重新命名檔案及目錄
-* `mkdir`: 建立目錄
-* `rm`: 移除檔案及目錄
-* `ln`: 建立 hard and symbolic links
+- `cp`: 複製檔案及目錄
+- `mv`: 移動/重新命名檔案及目錄
+- `mkdir`: 建立目錄
+- `rm`: 移除檔案及目錄
+- `ln`: 建立 hard and symbolic links
 
 GUI 可以達成這些事為什麼還需要指令呢？因為 command line 可以處理大量重複性的工作，譬如複製所有的 html 到另一個資料夾，而且目的地資料夾不存在這些 html
 
@@ -35,16 +35,16 @@ cp -u *.html destination
 
 可用來選出符合格式的檔案，chapter 8 會談更多
 
-`*`: 任意字
-`?`: 任意單個字
-`[characters]`：任一個 characters 所列的字
-`[!characters]`：非任一個 characters 所列的字
-`[[:class:]]`
-    `[:alnum:]`: 字母 + 數字
-    `[:alpha:]`: 字母
-    `[:digit:]`: 數字
-    `[:lower:]`: 小寫字母
-    `[:upper:]`: 大寫字母
+- `*`: 任意字
+- `?`: 任意單個字
+- `[characters]`：任一個 characters 所列的字
+- `[!characters]`：非任一個 characters 所列的字
+- `[[:class:]]`
+  - `[:alnum:]`: 字母 + 數字
+  - `[:alpha:]`: 字母
+  - `[:digit:]`: 數字
+  - `[:lower:]`: 小寫字母
+  - `[:upper:]`: 大寫字母
 
 ## mkdir
 

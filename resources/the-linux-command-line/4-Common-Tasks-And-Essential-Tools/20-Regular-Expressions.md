@@ -170,8 +170,8 @@ grep -Eh '^bz|gz|zip' dirlist*.txt
 
 例如以下電話格式
 
-* (nnn) nnn-nnnn
-* nnn nnn-nnnn
+- (nnn) nnn-nnnn
+- nnn nnn-nnnn
 
 ```shell
 echo "(555) 123-4567" | grep -E '^\(?[0-9][0-9][0-9]\)? [0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]$'

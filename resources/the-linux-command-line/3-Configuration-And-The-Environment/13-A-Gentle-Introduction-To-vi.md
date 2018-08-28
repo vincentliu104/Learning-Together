@@ -36,9 +36,9 @@ vi 包含在 vim 中
 
 ## Why We Should Learn vi
 
-* 通常系統都會有 vi
-* 輕量及快速
-* 不讓其他 Linux 或 Unix 使用者認為你是娘炮
+- 通常系統都會有 vi
+- 輕量及快速
+- 不讓其他 Linux 或 Unix 使用者認為你是娘炮
 
 ## A Little Background
 
@@ -260,9 +260,9 @@ vi ls-output.txt
 
 ## 儲存(Saving Our Work)
 
-* `ZZ`: 指令模式下，純存檔案然後離開 vi
-* `:wq`: 同上
-* `:w`: 可指定檔案名稱，類性 `另存為`，要注意儲存後你還是在編輯原本的檔案
+- `ZZ`: 指令模式下，純存檔案然後離開 vi
+- `:wq`: 同上
+- `:w`: 可指定檔案名稱，類性 `另存為`，要注意儲存後你還是在編輯原本的檔案
 
 ```shell
 # 假設你正在編輯 foo.txt，想把他另存為 foo1.txt
@@ -271,7 +271,7 @@ vi ls-output.txt
 
 ## 更多介紹
 
-* [Learning The vi Editor](http://en.wikibooks.org/wiki/Vi) A Wikibook from Wikipedia that offers a concise guide to vi and several of its work-a-likes including vim
-* [The Vim Book](ftp://ftp.vim.org/pub/vim/doc/book/vimbook-OPL.pdf) The vim project has a 570-page book that covers (almost) all of the features in vim.
-* [A Wikipedia article on Bill Joy](http://en.wikipedia.org/wiki/Bill_Joy)
-* [A Wikipedia article on Bram Moolenaar](http://en.wikipedia.org/wiki/Bram_Moolenaar) the author of vim
+- [Learning The vi Editor](http://en.wikibooks.org/wiki/Vi) A Wikibook from Wikipedia that offers a concise guide to vi and several of its work-a-likes including vim
+- [The Vim Book](ftp://ftp.vim.org/pub/vim/doc/book/vimbook-OPL.pdf) The vim project has a 570-page book that covers (almost) all of the features in vim.
+- [A Wikipedia article on Bill Joy](http://en.wikipedia.org/wiki/Bill_Joy)
+- [A Wikipedia article on Bram Moolenaar](http://en.wikipedia.org/wiki/Bram_Moolenaar) the author of vim

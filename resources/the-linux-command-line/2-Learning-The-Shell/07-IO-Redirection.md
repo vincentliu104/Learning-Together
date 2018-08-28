@@ -168,8 +168,8 @@ ls /bin /usr/bin | sort | uniq | grep zip -i
 ls /bin /usr/bin | sort | uniq | grep zip -v
 ```
 
-* `head`: 檔案開頭
-* `tail`: 檔案尾巴
+- `head`: 檔案開頭
+- `tail`: 檔案尾巴
 
 ```shell
 # 前 5 行
