@@ -20,7 +20,14 @@
 
 ### Topic 分支
 
+Topic 分支，有名確任務、目的所建的分支，可能是 debug 或是 develop 等等目的。
+Topic 分支是從穩定的 Integration 分支上建立的，完成作業後，再將 Topic 分支 merge 回 Integration 分支
+
 ## 分支的切換
+
+`git checkout`: 用來轉換分支
+`HEAD`: 代表所在指向分支的 commit，checkout 就是移動 HEAD 的標籤，而 `HEAD^` / `HEAD~2`，可以讓 HEAD 移動，`^` 代表往前一個 commit，`~`代表會後一個 commit ，加數字即可移動數字的步數
+`git stash`: 暫存未 commit 的修改檔案。當有未 commit 的修改檔案時， checkout 會無法轉換 branch，這時候可以用 stash 暫存未 commit 的修改檔案，即可進行分支的切換。
 
 ## 分支的合併
 
