@@ -10,6 +10,10 @@
 * [從零開始搭建一個react項目](https://hk.saowen.com/a/28409d9a045c3bca4b2fe6ab40398e288c87103bef787c7f9248c091c418f9bf)
 
 ### create-react-app
+如要使用webpack4 要鍵入以下方式：
+```
+npx create-react-app@next --scripts-version=2.0.0-next.3e165448 app-name
+```
 * [安裝教學](https://segmentfault.com/a/1190000010454922)
 * [鐵人賽教學](https://ithelp.ithome.com.tw/articles/10193122)
 * [create-react-app的使用及原理分析](https://hk.saowen.com/a/d91e46e7c3c6a137d56fe539ee9d7f4c94255ecab8bc414da4141f56c253c07c)
