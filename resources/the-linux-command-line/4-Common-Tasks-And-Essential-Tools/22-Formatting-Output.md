@@ -1,3 +1,17 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [22-Formatting-Output](#22-formatting-output)
+  - [簡單的格式化工具(Simple Formatting Tools)](#%E7%B0%A1%E5%96%AE%E7%9A%84%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%B7%A5%E5%85%B7simple-formatting-tools)
+    - [nl – Number Lines](#nl--number-lines)
+    - [fold - 把每行文字固定在一定長度](#fold---%E6%8A%8A%E6%AF%8F%E8%A1%8C%E6%96%87%E5%AD%97%E5%9B%BA%E5%AE%9A%E5%9C%A8%E4%B8%80%E5%AE%9A%E9%95%B7%E5%BA%A6)
+    - [fmt - A Simple Text Formatter](#fmt---a-simple-text-formatter)
+    - [pr](#pr)
+    - [printf](#printf)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # 22-Formatting-Output
 
 主要介紹指令
