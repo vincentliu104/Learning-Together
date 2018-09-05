@@ -31,4 +31,18 @@ Topic 分支是從穩定的 Integration 分支上建立的，完成作業後，�
 
 ## 分支的合併
 
+將 Topic 分支合併到 Integration(master) 分支，合併的方法有兩種: `git merge`, `git rebase`
+
+`$git merge`: 當 Topic 分支要合併到 master 上時，會根據 i. master 的狀態與 ii. 合併後在 master上呈現的 commit 形式，這兩種情況的差異，使用不同的 merge 效果
+
+### master 上的狀態
+
+綠色的為 master 分支，藍色的為 bugfix (topic) 分支，我們檢查的順序依 [i] master 的狀態 [ii] 合併後的 master 呈現 commit 的形式
+
+![fast-forward](https://backlog.com/git-tutorial/tw/img/post/stepup/capture_stepup1_4_1.png)
+
+1. ![fast-forward](https://backlog.com/git-tutorial/tw/img/post/stepup/capture_stepup1_4_2.png)
+  i. _master_ 從 _bugifx_ checkout 後，沒有新的 commit，代表目前 _bugfix_ 與 master 上的差異只有 _bugfix_ 上修改的部分
+  ii. 期望 master 上能保留 bugfix 上的 commit ，並且 不產生新的 commit ，這種狀況又稱 **fast-forward**
+
 ## Topic 分支和 integration 分支的運用實例
