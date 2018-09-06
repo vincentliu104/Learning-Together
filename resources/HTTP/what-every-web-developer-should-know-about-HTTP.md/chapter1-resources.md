@@ -54,8 +54,8 @@ client 可以指定他想要哪種格式(Server 不一定會提供就是了...)
 ## 參考資料
 
 * [URLs - SEO Best Practices](https://moz.com/learn/seo/url)
-* [RFC3986](https://www.ietf.org/rfc/rfc3986.txt)
-* [RFC1738](https://www.ietf.org/rfc/rfc1738.txt)
+* [RFC3986](https://tools.ietf.org/html/rfc3986)
+* [RFC1738](https://tools.ietf.org/html/rfc1738)
 * [URL Encoding - 维基百科](https://zh.wikipedia.org/wiki/%E7%99%BE%E5%88%86%E5%8F%B7%E7%BC%96%E7%A0%81)
 * [Media Types - 维基百科](https://zh.wikipedia.org/wiki/%E4%BA%92%E8%81%94%E7%BD%91%E5%AA%92%E4%BD%93%E7%B1%BB%E5%9E%8B)
 * [Content Type Negotiation - 维基百科](https://zh.wikipedia.org/wiki/%E5%86%85%E5%AE%B9%E5%8D%8F%E5%95%86)
