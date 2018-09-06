@@ -45,6 +45,7 @@
 
 * non-fast-forward: `git merge --no-ff <branch name>`
 * git tree: `git log --graph --oneline --all`
+* ![git tree](https://i.imgur.com/yj1Ox2P.jpg)
 
 #### 第二種 master 狀態
 
