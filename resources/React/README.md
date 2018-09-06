@@ -23,3 +23,10 @@ npx create-react-app@next --scripts-version=2.0.0-next.3e165448 app-name
 * [React Router 官網](https://reacttraining.com/react-router/)
 * [React Router 中文文檔](https://github.com/react-translate-team/react-router-CN)
 * [你不知道的 React Router 4](https://www.jianshu.com/p/a364dd186c74)
+* [初探React Router 4.0](https://www.jianshu.com/p/e3adc9b5f75c?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation)
+
+### React 插件
+* [react-autocomplete](https://github.com/reactjs/react-autocomplete)
+
+### React 元件
+* [Ant Design](https://ant.design/index-cn)
