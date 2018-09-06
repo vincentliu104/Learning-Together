@@ -128,3 +128,7 @@ Referer: http://www.google.com/url?&q=odetocode
 
 User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64)Chrome/16.0.912.75 Safari/535.7
 ```
+
+## 參考資料
+
+* [RFC822](https://tools.ietf.org/html/rfc822)
