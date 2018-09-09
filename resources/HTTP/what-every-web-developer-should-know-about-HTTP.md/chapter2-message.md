@@ -129,6 +129,72 @@ Referer: http://www.google.com/url?&q=odetocode
 User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64)Chrome/16.0.912.75 Safari/535.7
 ```
 
+## The Response
+
+格式
+
+```sample
+[version][status][reason]
+
+[headers]
+
+[body]
+```
+
+節錄範例
+
+```smaple
+HTTP/1.1 200 OK
+
+Cache-Control: private
+Content-Type: text/html; charset=utf-8
+Server:Microsoft-IIS/7.0
+X-AspNet-Version:2.0.50727
+X-Powered-By:ASP.NET
+Date:Sat, 14 Jan 2012 04:00:08 GMT
+Connection:close
+Content-Length: 17151
+
+<html>
+<head>
+    <title>.Net related Articles, Code and Resources</title>
+</head>
+<body>
+...content…
+</body>
+</html>
+```
+
+## Response Status Code
+
+在 HTTP 的層級（非 application 角度）用數字告訴 client 發生什麼事了，分成 5 大類
+
+範圍 | 類別
+---|---
+100-199 | Informational
+200-299 | Successful
+300-399 | Redirection
+400-499 | Client Error
+500-599 | Server Error
+
+常見的 response code
+
+response code | 說明
+--------------|---
+200(OK) | 回應成功
+301(Moved Permanently) | 資源已永久移到新的Location header 中的 URL
+302(Moved Temporarily) | 資源已暫時移到新的Location header 中的 URL（通常會在 Post 成功後 redirect 到 client 可以 Get 的資源）
+304(Not modified) | server 表示 client 上次取用的資源沒變更
+400(Bad request) | server 搞不懂 request
+403(Forbidden) | server 拒絕 client 要取得的資源，可能是client 沒權限
+404(Not Found) | server 沒這個資源，可能 URL 打錯了
+500(Internal Server Error) | server 處理 request 時，遇到問題，通常是程式邏輯錯誤
+503(Service Unavailable) | server 將不會處理 request，通常是 server loading 過重
+
 ## 參考資料
 
 * [RFC822](https://tools.ietf.org/html/rfc822)
+* [HTTP 狀態碼](https://developer.mozilla.org/zh-TW/docs/Web/HTTP/Status)
+* [HTTP Status Codes &mdash; httpstatuses.com](https://httpstatuses.com/)
+* [網頁開發人員應了解的 HTTP 狀態碼 | The Will Will Web](https://blog.miniasp.com/post/2009/01/16/Web-developer-should-know-about-HTTP-Status-Code.aspx)
+* [漂亮的 HTTP Response Code Cheatsheet](https://blog.gslin.org/archives/2016/05/25/6596/%E6%BC%82%E4%BA%AE%E7%9A%84-http-response-code-cheatsheet/)
