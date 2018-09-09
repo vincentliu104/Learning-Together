@@ -15,7 +15,7 @@
 
 # 7 – 資料流重導向(I/O Redirection)
 
-最酷俊帥的指令，可以把指令的結果寫到檔案、結合指令(piplines)
+最酷俊帥的指令，可以把指令的結果寫到檔案、結合指令(piplines)
 
 Unix 中一切都是檔案
 
@@ -172,10 +172,10 @@ ls /bin /usr/bin | sort | uniq | grep zip -v
 - `tail`: 檔案尾巴
 
 ```shell
-# 前 5 行
+# 前 5 行
 head -n 5 ls-output.txt
 
-# 後 5 行
+# 後 5 行
 tail -n 5 ls-output.txt
 
 ls /usr/bin | tail -n 5
