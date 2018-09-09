@@ -44,7 +44,7 @@ ls
 [me@linuxbox ~]$ echo D*
 Desktop Documents
 
-# s 結尾的黨案
+# s 結尾的檔案
 [me@linuxbox ~]$ echo *s
 Documents Pictures Templates Videos
 
