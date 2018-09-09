@@ -42,7 +42,7 @@ vi 包含在 vim 中
 
 ## A Little Background
 
-第一版的 vi 是由 UCB 的學生 Bill Joy 在 1967 年所撰寫，後來與他人共同創立 Sun Microsystems。 vi 的名稱來自於 `visual`。在 `visual` editor 之前，曾有一次只能編輯一行的 `line` editor。vi 併入了 line editor `ex`，使用 vi 時可以使用行編輯指令
+第一版的 vi 是由 UCB 的學生 Bill Joy 在 1967 年所撰寫，後來與他人共同創立 Sun Microsystems。 vi 的名稱來自於 `visual`。在 `visual` editor 之前，曾有一次只能編輯一行的 `line` editor。vi 併入了 line editor `ex`，使用 vi 時可以使用行編輯指令
 
 多數 Linux 發行版本並沒有 vi，取而代之的是 vim(vi improved) by Bram Moolenaar，vim 通常會 symlink 到 vi 或使用別名
 
@@ -223,7 +223,7 @@ vi foo.txt ls-output.txt
 
 `:n`: ex 指令，下一個
 `:N`: ex 指令，上一個
-`:buffers`: vim 提供的 ex 指令，讓你輕鬆切換檔案
+`:buffers`: vim 提供的 ex 指令，讓你輕鬆切換檔案
 `:buffer 2`: 切換到第二個檔案
 
 ### 開啟額外檔案(Opening Additional Files For Editing)
