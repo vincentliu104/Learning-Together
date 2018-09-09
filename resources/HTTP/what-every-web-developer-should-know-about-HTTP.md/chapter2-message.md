@@ -191,6 +191,53 @@ response code | 說明
 500(Internal Server Error) | server 處理 request 時，遇到問題，通常是程式邏輯錯誤
 503(Service Unavailable) | server 將不會處理 request，通常是 server loading 過重
 
+## Response Header
+
+Server 在 response header  提供額外資訊給 client 處理，依據不同類的 response 會提供不同的 response header。比如說 server 會指定 MIME 類型
+
+範例
+
+```sample
+HTTP/ 1.1 200 OK
+Cache-Control: private
+Content-Type: text/html;charset=utf-8
+Server:Microsoft-IIS/7.0
+X-AspNet-Version:2.0.50727
+X-Powered-By:ASP.NET
+Date:Sat, 14 Jan 2012 04:00:08 GMT
+Connection:close
+Content-Length:17151
+
+<html>
+<head>
+    <title>.Net related Articles, Code and Resources</title>
+</head>
+<body>
+...content…
+</body></html>
+```
+
+redirect header 範例
+
+```sample
+HTTP/1.1 301 Moved Permanently
+Server:Microsoft-IIS/7.0
+X-AspNet-Version:2.0.50727
+X-Powered-By:ASP.NET
+Location:http://odetocode.com
+```
+
+有些 header 是用來強化快取及優化效能
+
+* ETag: 一組識別碼，當資源有變更識別碼就會改變，很有效率地讓 client 知道快取的資源要不要重新取得
+* Expires: 資源可以快取多久
+* Last-Modified
+
+## 查看 HTTP  message 工具
+
+* Chrome - developer tools
+* [Fiddler](https://www.telerik.com/download/fiddler): 除了查看之外，還可以建立或修改 request
+
 ## 參考資料
 
 * [RFC822](https://tools.ietf.org/html/rfc822)
