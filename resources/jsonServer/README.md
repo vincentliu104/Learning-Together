@@ -15,8 +15,7 @@
 	 "port": 3001
 	}
 	```
-3. 測試 JSON Server
-在瀏覽器開啟 `http://localhost:port號`，如果成功將會有 json 檔的資料
+3. 測試 JSON Server 在瀏覽器開啟 `http://localhost:port號`，如果成功將會有 json 檔的資料
 4. 在 **Postman** 做測試，以下使用 JSON Server 的範例來做示範
 	- **GET (取得資料)**：
 		- 選擇 `GET` 
