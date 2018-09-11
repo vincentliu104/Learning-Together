@@ -7,12 +7,12 @@
 1. 安裝 JSON Server
 `npm install -g json-server`
 2. 新增與啟動 JSON Server 檔案
-	- 建立一個 `db.json` 檔或在 terminal 鍵入 `json-server --watch db.json` 系統會自動產一個範例檔外加執行 server
-	- 因為 port 號預設是 `3000`，如有要更改 port 號可新增一個 `json-server.json` 檔，裡面輸入以下方式：
+	- 建立一個 `db.json` 檔或在 terminal 鍵入 `json-server --watch db.json` 系統會自動產一個範例檔外加執行 server
+	- 因為 port 號預設是 `3000`，如有要更改 port 號可新增一個 `json-server.json` 檔，裡面輸入以下方式：
 
 	``` json
 	{
-	 "port": port 號
+	 "port": 3001
 	}
 	```
 3. 測試 JSON Server
