@@ -66,7 +66,14 @@ cross-site scripting attack(XSS)，駭客可能會將惡意的 Javascript 注入
 
 #### Types of Cookies
 
-TODO
+* Session cookie: 瀏覽器關閉後就會被消滅
+* Persistent cookie: 瀏覽器會把 cookie 存在 disk
+
+這兩種 cookie 差異之處在於 persistent cookie 需要設定到期時間(expires)
+
+```sample
+Set-Cookie: name=value; expires=Monday, 09-July-2017 21:12:00 GMT
+```
 
 #### Cookie Paths & Domain
 
