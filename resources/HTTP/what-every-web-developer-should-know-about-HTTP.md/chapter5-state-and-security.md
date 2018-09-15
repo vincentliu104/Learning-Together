@@ -60,7 +60,9 @@ Set-Cookie: ASP.NET_SessionId=en5yl2yopwkdamv2ur5c3z45; path=/; HttpOnly
 
 #### HttpOnly Cookies
 
-TODO
+cross-site scripting attack(XSS)，駭客可能會將惡意的 Javascript 注入到網站中，其他 user 的 cookie 資訊會被攥改、查看、竊取
+
+解決方式是在 Set-Cookie 時使用 `HttpOnly` flag，瀏覽器看到這個 flag 就不會讓你使用 Javascript 來操作 cookie，只會在每個 HTTP request message 的 header 中傳遞
 
 #### Types of Cookies
 
