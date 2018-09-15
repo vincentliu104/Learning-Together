@@ -77,7 +77,24 @@ Set-Cookie: name=value; expires=Monday, 09-July-2017 21:12:00 GMT
 
 #### Cookie Paths & Domain
 
-TODO
+在特定 domian 設定的 cookie，只會在該 domain 中傳遞。這是考量到安全性及隱私，例如在 amazon.com 設定的 cookie，定不會傳遞到 google.com
+
+application 可透過 `domain`, `path` 屬性來控制 cookie 可使用的範圍
+
+```sample
+HTTP/1.1 200 OK
+
+Set-Cookie: name=value; domain=.server.com; path=/stuff
+```
+
+`domain` 讓 cookie 的範圍可以擴展到子網域(sub-domain)
+
+* www.server.com: 僅在 `www.server.com` 傳遞
+* server.com: 傳遞範圍包括 `help.server.com`, `images.server.com`, `server.com`...
+
+如果你在 `www.server.com` 要設定 cookie doamin 為 `.microsodt.com`，這不會被允許的，瀏覽器會拒絕
+
+`path` 屬性可限制 cookie 僅在特定資源路徑中，如上所示cookie 可傳遞的 path 可為`/stuff`，或是 /stuff 底下的資源 `/stuff/images`
 
 #### Cookie Downsides
 
