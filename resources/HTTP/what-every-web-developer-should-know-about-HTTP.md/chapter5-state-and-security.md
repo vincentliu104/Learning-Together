@@ -185,7 +185,11 @@ Set-Cookie: .ASPXAUTH=9694BAB... path=/; HttpOnly
 
 ### OpenId and OAuth
 
-TODO
+如果 Application 不想經手帳號密碼，user 不想要每個網站都有不同的帳號密碼時，OpenId and OAuth 提供了去中心化的認證方式
+
+user 向 OpenID identify provider 註冊帳號，例如 Google, Facebook，當其他服務提供 Google 登入功能時就讓 user 方便很多了
+
+在開發及 debug 的複雜度較高
 
 ## Secure HTTP
 
