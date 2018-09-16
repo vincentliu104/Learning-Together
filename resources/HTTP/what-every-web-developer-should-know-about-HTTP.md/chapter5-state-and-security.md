@@ -149,11 +149,39 @@ WWW-Authenticate: Digent realm="localhost", qop="auth,auth-int", nonce="dcd98b71
 
 ### Windows Authentication
 
-TODO
+微軟產品的認證協定，不常見不多作介紹
+
+```sample
+HTTP/1.0 404 Unauthorized
+
+WWW-Authenticate: Negotiate
+```
 
 ### Forms-bases Authentication
 
-TODO
+頗受歡迎的非標準認證方式，許多 web framework 會提供支援
+
+通常會把 user 302 redirect 到登入頁，user request 的 URL 可能會附加在 query string 中，當 user 登入後，Application 就可以把 user redirect 到他想去的頁面
+
+```smaple
+HTTP/1.1 302 Found
+
+Location: /Login.aspx?ReturnUrl=Admin.aspx
+```
+
+因為 user credential 會明碼傳遞，所以只有在 HTTP Secure 下才是安全的
+
+```sample
+HTTP/1.1 302 Found
+
+Location: /admin.aspx
+
+Set-Cookie: .ASPXAUTH=9694BAB... path=/; HttpOnly
+```
+
+多數的 authentication cookie 會用加密及 hash，避免被竄改
+
+會受歡迎是因為 Application 可控制登入的體驗及 credential 驗證
 
 ### OpenId and OAuth
 
