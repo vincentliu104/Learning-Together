@@ -71,3 +71,18 @@
 ## 分支的運用實例
 
 1. https://github.com/JiajunChou/GitPractice #9e1502d
+
+## 專欄「A successful Git branching model」
+
+![branch](https://backlog.com/git-tutorial/tw/img/post/stepup/capture_stepup1_5_6.png)
+
+四種類型的分支: 
+
+1. Main 分支 (master)
+1. Feature 分支
+1. Release 分支
+1. Hot fix 分支
+
+### Hot fix 分支
+
+1. Hot fix 分支，顧名思義就是線上版本出現緊急修改需求，通常是線上的 bug ，而非 dev 的開發需求，因需要盡快修改上線，這個分支並不需要經過 dev > release 的過程，而是直接由 master checkout 出來，再直接回 master 上，這個也需要 rebase 到 dev 上，不然下次 dev > release 後，bug 又會出現在線上
