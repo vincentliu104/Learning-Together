@@ -98,7 +98,12 @@ Set-Cookie: name=value; domain=.server.com; path=/stuff
 
 #### Cookie Downsides
 
-TODO
+1. cookie 會受到 XSS 攻擊
+1. 廣告商使用 third-party cookies(cookie domain 與 URL domain 不同)) 來追蹤使用者
+
+server.com 利用 `<script>` 載入 advertising.com 的資源，advertising.com 就可以記錄 user 在 server.com 的操作行為，如果很多網站都使用 advertising.com，她就可以用來分析 user 的行為了
+
+有很多裝置可以監聽或攔截 HTTP traffic，所以要避免使用 cookie 儲存機敏資訊
 
 ## Authentication
 
