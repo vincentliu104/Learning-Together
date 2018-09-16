@@ -139,7 +139,13 @@ Authorization: Basic bm86aXdvdWxkbnRkb3RoYXQh
 
 ### Digest Authentication
 
-TODO
+Basic Authentication 的改良版，server 會提供 client 一次性的 MD5 hash 隨機碼(nonce)，避免重送攻擊
+
+```sample
+HTTP/1.0 404 Unauthorized
+
+WWW-Authenticate: Digent realm="localhost", qop="auth,auth-int", nonce="dcd98b7102dd2f0e8b11d0f600bfb0c093", opaque="5ccc069c403ebaf9f0171e9517f40e41"
+```
 
 ### Windows Authentication
 
