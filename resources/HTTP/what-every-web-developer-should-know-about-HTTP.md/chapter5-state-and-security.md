@@ -135,7 +135,7 @@ GET http://localhost/html/html5/ HTTP/1.1
 Authorization: Basic bm86aXdvdWxkbnRkb3RoYXQh
 ```
 
-`Authorization` header value 為 client 帳號及密碼 base64 encode。Basic Authentication 預設是不安全的，只要有人使用 base64 decoder 解密你的 message 就可以偷走你的帳號及密碼，所以 basic authentication 通常會搭配 HTTP Secure
+`Authorization` header value 為 client 帳號及密碼 base64 encode。Basic Authentication 預設是不安全的，只要有人使用 base64 decoder 解密你的 message 就可以偷走你的帳號及密碼，所以 basic authentication 通常會搭配 Secure HTTP
 
 ### Digest Authentication
 
@@ -169,7 +169,7 @@ HTTP/1.1 302 Found
 Location: /Login.aspx?ReturnUrl=Admin.aspx
 ```
 
-因為 user credential 會明碼傳遞，所以只有在 HTTP Secure 下才是安全的
+因為 user credential 會明碼傳遞，所以只有在 Secure HTTP 下才是安全的
 
 ```sample
 HTTP/1.1 302 Found
@@ -193,7 +193,13 @@ user 向 OpenID identify provider 註冊帳號，例如 Google, Facebook，當�
 
 ## Secure HTTP
 
-TODO
+HTTPS 使用 Secure Socket Layer(SSL)/Transport Layer Security(TLS)。系統管理員需要從憑證授權中心購買及安裝憑證後才會生效
+
+開發者角度
+
+1. HTTPS 會加密所有的 request, response，包括 HTTP header, message body, URL 中 host name 之後的內容(path, query string)
+1. server 憑證會用來向 client 驗證 server 的身份
+1. HTTPS 不會驗證 user，那是 Application 要負責的事
 
 ## 延伸閱讀
 
