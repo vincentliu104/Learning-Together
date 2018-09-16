@@ -107,11 +107,35 @@ server.com 利用 `<script>` 載入 advertising.com 的資源，advertising.com 
 
 ## Authentication
 
-TODO
+user 要取用特定資源時，server 會要求他通過認證後才能取得，通常會需要 user 提供 credential，例如：帳號、密碼、email等等
 
 ### Basic Authentication
 
-TODO
+client 請求資源，先發送 HTTP message
+
+```sample
+GET http://localhost/html/html5/ HTTP/1.1
+
+Host: localhost
+```
+
+server 限制 /html5/ 僅特定 user 可查看，他將會發起 authentication challenge
+
+```sample
+HTTP/1.1 401 Unauthorized
+
+WWW-Authenticate: Basic realm="localhost"
+```
+
+401 表示 user 未經認證，`WWW-Authenticate` 要求 user 提供 credential 後再重試，`realm` 屬性是給予 user 的說明文字，接下來會有 UI 讓 user 輸入 credential，再發 request 給 server
+
+```sample
+GET http://localhost/html/html5/ HTTP/1.1
+
+Authorization: Basic bm86aXdvdWxkbnRkb3RoYXQh
+```
+
+`Authorization` header value 為 client 帳號及密碼 base64 encode。Basic Authentication 預設是不安全的，只要有人使用 base64 decoder 解密你的 message 就可以偷走你的帳號及密碼，所以 basic authentication 通常會搭配 HTTP Secure
 
 ### Digest Authentication
 
