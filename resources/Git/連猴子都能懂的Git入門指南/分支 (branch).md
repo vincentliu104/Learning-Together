@@ -28,13 +28,13 @@
 
 ### master 上的狀態
 
-#### 第一種 master 狀態
+#### Merge 合併
 
  _master_ 從 _bugifx_ checkout 後，沒有新的 commit，代表目前 _bugfix_ 與 master 上的差異只有 _bugfix_ 上修改的部分，如下圖
 
 ![fast-forward](https://backlog.com/git-tutorial/tw/img/post/stepup/capture_stepup1_4_1.png)
 
-綠色的為 master 分支，藍色的為 bugfix () 分支，我們檢查的順序依 [i] master 的狀態 [ii] 合併後的 master 呈現 commit 的形式
+綠色的為 master 分支，藍色的為 bugfix 分支，我們檢查的順序依 [i] master 的狀態 [ii] 合併後的 master 呈現 commit 的形式
 
 1. **第一種 commit 呈現 (fast-forward)**
    1. ![fast-forward](https://backlog.com/git-tutorial/tw/img/post/stepup/capture_stepup1_4_2.png)
@@ -43,10 +43,31 @@
    1. ![merge](https://backlog.com/git-tutorial/tw/img/post/stepup/capture_stepup1_4_4.png)
    1. 期望 master 上能保留 bugfix 上的 commit ，並且 產生新的一個合併 commit
 
-* non-fast-forward: `git merge --no-ff <branch name>`
+**NOTE:**
+
+* non-fast-forward: `git merge --no-ff <branch name>` (建議)
 * git tree: `git log --graph --oneline --all`
 * ![git tree](https://i.imgur.com/yj1Ox2P.jpg)
 
-#### 第二種 master 狀態
+#### Rebase 合併
+
+1. 當想要從 master 導入最新變更的時候，可以在 dev branch 上 使用 rebase。
+1. 當想要合併 dev branch 到 master 時，可以先在 dev branch 上使用 rebase，接著再將 dev branch 變更合併到 master 上。
+
+**Note:**
+
+* Merge: 修改內容的歷史紀錄會維持原狀，但合併後的歷史紀錄會變更複雜
+* Rebase: 修改內容的歷史紀錄會接在要合併的分之後面，合併後的歷史紀錄會比較清楚簡單，但是會比使用 merge 更容易發生衝突
+
+**圖例:**
+
+1. ![situation](https://backlog.com/git-tutorial/tw/img/post/stepup/capture_stepup1_4_6.png)
+
+1. 使用 rebase
+1. [rebase](https://backlog.com/git-tutorial/tw/img/post/stepup/capture_stepup1_4_8.png)
+1. [rebase](https://backlog.com/git-tutorial/tw/img/post/stepup/capture_stepup1_4_7.png)
+1. [rebase](https://backlog.com/git-tutorial/tw/img/post/stepup/capture_stepup1_4_9.png)
 
 ## 分支的運用實例
+
+1. https://github.com/JiajunChou/GitPractice #9e1502d
