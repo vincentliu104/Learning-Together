@@ -22,7 +22,8 @@ status code 系列 | 說明
 
 ## 工具
 
-[URL Decoder/Encoder](https://meyerweb.com/eric/tools/dencoder/)
+* [URL Decoder/Encoder](https://meyerweb.com/eric/tools/dencoder/)
+* [Unicode Converter](https://www.branah.com/unicode-converter)
 
 ### 查看 HTTP message
 
