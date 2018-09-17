@@ -1,3 +1,28 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Chapter 5: State and Security](#chapter-5-state-and-security)
+  - [The Stateless yet Stateful Web](#the-stateless-yet-stateful-web)
+  - [Identification and Cookies](#identification-and-cookies)
+  - [Setting Cookie](#setting-cookie)
+    - [cookie 資訊](#cookie-%E8%B3%87%E8%A8%8A)
+      - [name-value pair](#name-value-pair)
+      - [HttpOnly Cookies](#httponly-cookies)
+      - [Types of Cookies](#types-of-cookies)
+      - [Cookie Paths & Domain](#cookie-paths--domain)
+      - [Cookie Downsides](#cookie-downsides)
+  - [Authentication](#authentication)
+    - [Basic Authentication](#basic-authentication)
+    - [Digest Authentication](#digest-authentication)
+    - [Windows Authentication](#windows-authentication)
+    - [Forms-bases Authentication](#forms-bases-authentication)
+    - [OpenId and OAuth](#openid-and-oauth)
+  - [Secure HTTP](#secure-http)
+  - [延伸閱讀](#%E5%BB%B6%E4%BC%B8%E9%96%B1%E8%AE%80)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Chapter 5: State and Security
 
 HTTP 該注意的安全事項，包含辨認 user、HTTP authentication 運作方式，某些情境會需要 HTTPS、HTTP state management

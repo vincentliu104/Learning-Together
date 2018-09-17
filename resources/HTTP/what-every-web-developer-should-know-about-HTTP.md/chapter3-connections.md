@@ -1,3 +1,14 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Chapter 3: Connections](#chapter-3-connections)
+  - [Parallel Connections](#parallel-connections)
+  - [Persistent Connections](#persistent-connections)
+  - [Pipelined Connections](#pipelined-connections)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Chapter 3: Connections
 
 網路路通信(Network Communication)有分很多層級，每一層都有它所負責的工作項目

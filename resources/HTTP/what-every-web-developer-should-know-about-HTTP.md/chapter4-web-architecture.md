@@ -1,3 +1,19 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Chapter 4: Web Architecture](#chapter-4-web-architecture)
+  - [Resource Redux](#resource-redux)
+    - [URL 做不到的事](#url-%E5%81%9A%E4%B8%8D%E5%88%B0%E7%9A%84%E4%BA%8B)
+  - [The Visible Protocol - HTTP](#the-visible-protocol---http)
+  - [Adding Value](#adding-value)
+  - [Proxies](#proxies)
+  - [Caching](#caching)
+    - [response message 範例](#response-message-%E7%AF%84%E4%BE%8B)
+  - [參考資料](#%E5%8F%83%E8%80%83%E8%B3%87%E6%96%99)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Chapter 4: Web Architecture
 
 建構應用程式及 web service 處理資源該注意的事項
