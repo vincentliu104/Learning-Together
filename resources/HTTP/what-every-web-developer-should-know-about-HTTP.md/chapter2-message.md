@@ -241,7 +241,3 @@ Location:http://odetocode.com
 ## 參考資料
 
 * [RFC822](https://tools.ietf.org/html/rfc822)
-* [HTTP 狀態碼](https://developer.mozilla.org/zh-TW/docs/Web/HTTP/Status)
-* [HTTP Status Codes &mdash; httpstatuses.com](https://httpstatuses.com/)
-* [網頁開發人員應了解的 HTTP 狀態碼 | The Will Will Web](https://blog.miniasp.com/post/2009/01/16/Web-developer-should-know-about-HTTP-Status-Code.aspx)
-* [漂亮的 HTTP Response Code Cheatsheet](https://blog.gslin.org/archives/2016/05/25/6596/%E6%BC%82%E4%BA%AE%E7%9A%84-http-response-code-cheatsheet/)
