@@ -20,6 +20,19 @@ status code 系列 | 說明
 * [HTTP Status Codes &mdash; httpstatuses.com](https://httpstatuses.com/)
 * [網頁開發人員應了解的 HTTP 狀態碼 | The Will Will Web](https://blog.miniasp.com/post/2009/01/16/Web-developer-should-know-about-HTTP-Status-Code.aspx)
 
+## 工具
+
+### 查看 HTTP message
+
+* [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/network-performance/?hl=zh-tw)
+* [Understanding Resource Timing](https://developers.google.com/web/tools/chrome-devtools/network-performance/understanding-resource-timing)
+* [Firefox Network Monitor](https://developer.mozilla.org/zh-TW/docs/Tools/Network_Monitor)
+* [Fiddler](https://www.telerik.com/download/fiddler): 除了查看之外，還可以建立或修改 request
+
+### 查看電腦跟網路溝通的資料
+
+[Wireshark](https://www.wireshark.org/)
+
 ## 學習資源
 
 * [HTTP | MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP): 詳盡

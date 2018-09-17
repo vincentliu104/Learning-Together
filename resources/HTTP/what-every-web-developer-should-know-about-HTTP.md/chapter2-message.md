@@ -233,11 +233,6 @@ Location:http://odetocode.com
 * Expires: 資源可以快取多久
 * Last-Modified
 
-## 查看 HTTP  message 工具
-
-* Chrome - developer tools
-* [Fiddler](https://www.telerik.com/download/fiddler): 除了查看之外，還可以建立或修改 request
-
 ## 參考資料
 
 * [RFC822](https://tools.ietf.org/html/rfc822)
