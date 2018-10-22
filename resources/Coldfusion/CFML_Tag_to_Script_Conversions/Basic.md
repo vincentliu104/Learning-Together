@@ -32,5 +32,32 @@ comment
 </cfscript>
 ```
 
-## Variable
+## Variables
 
+```cfm
+
+<cfparam name="Id_no" default="">
+
+<cfset title = "">
+
+<cfarguments>
+
+<cfset var >
+
+```
+
+1. `cfparam`: 測試參數是否存在，常用於接 form / ajax 過來的資料。當程式接收到資料後，可以用 default value ，做為資料是否接收到的處理。常用屬性:
+    a. default
+    b. maxLength
+    c. type
+    d. pattern: 可以用 JavaScript 的regular expression 做為參數的檢查
+
+## Print
+
+```cfm
+
+<cfdump var = >
+
+<cfoutput></cfoutput>
+
+```
