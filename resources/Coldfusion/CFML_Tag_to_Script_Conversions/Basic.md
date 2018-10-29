@@ -44,6 +44,8 @@ comment
 
 <cfset var >
 
+<cfsavecontent variable="ret_contain"></cfsavecontent>
+
 ```
 
 1. `cfparam`: 測試參數是否存在，常用於接 form / ajax 過來的資料。當程式接收到資料後，可以用 default value ，做為資料是否接收到的處理。常用屬性:
@@ -51,6 +53,12 @@ comment
     b. maxLength
     c. type
     d. pattern: 可以用 JavaScript 的regular expression 做為參數的檢查
+1. `cfset`: 創建變數，也可以 calling 一個 function，已下列出常見的變數種類
+    a. `<cfset str = "String">`
+    b. `<cfset num = 10>`
+    c. `<cfset arr = ArrayNew(dimension)> <cfset arr[1] = 1> ...`，dimension = 1, 2 or 3
+    d. `<cfset struct = structNew()> <cfset struct.info = "aaa"> = <cfset struct["info"] = "aaa"> = <cset struct={name="aaa"}>`
+    e. `<cfset query1 =  QueryNew("basic_id_no", "sex")>`
 
 ## Print
 
@@ -61,3 +69,7 @@ comment
 <cfoutput></cfoutput>
 
 ```
+
+## 
+
+`Ucase()`
