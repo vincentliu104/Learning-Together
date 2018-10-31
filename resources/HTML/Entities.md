@@ -8,7 +8,7 @@
 
 有些保留字元會有 Entity Name 可以使用，若沒有，則可以 Entity Number (也可稱HTML Number) 來表示，
 
-像 `&lt` 的 Entity Number 就是 `&#60;`
+像 `<` 的 Entity Number 就是 `&#60;`
 
 而在HTML頁面上會有 ~~你看不到它~~ 的狀況:空白(**space**) ，Entity Number 是 `&#32;`
 
@@ -19,7 +19,6 @@
 
 **~~不要太相信HTML頁面上所顯示的東西~~**
 
-<html>&copy;&reg;</html>
 
 # 參考資料
 
