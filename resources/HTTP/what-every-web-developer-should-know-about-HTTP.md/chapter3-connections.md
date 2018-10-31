@@ -1,3 +1,14 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Chapter 3: Connections](#chapter-3-connections)
+  - [Parallel Connections](#parallel-connections)
+  - [Persistent Connections](#persistent-connections)
+  - [Pipelined Connections](#pipelined-connections)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Chapter 3: Connections
 
 網路路通信(Network Communication)有分很多層級，每一層都有它所負責的工作項目
@@ -33,7 +44,3 @@ IE6 遵守 HTTP 1.1，同一個 host 最多同時只允許 2 個連線，當時�
 ## Pipelined Connections
 
 未來的規範：client 還沒收到回應前可在一個連線中包含多個 HTTP request
-
-## 工具
-
-* [Wireshark · Go Deep.](https://www.wireshark.org/): 可以查看電腦跟網路溝通的資料
