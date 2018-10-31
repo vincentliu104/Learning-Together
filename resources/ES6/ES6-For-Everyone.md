@@ -2,8 +2,8 @@
 
 - [New Variables — Creation, Updating and Scoping](#new-variables---creation--updating-and-scoping)
   - [範例](#--)
-  - [`var` 還有用嗎？](#--var-------)
-  - [參考資料](#-----)
+  - [`var` 還有用嗎？](#--var-------)
+  - [參考資料](#-----)
 - [Function Improvements: Arrows and Default Arguments](#function-improvements--arrows-and-default-arguments)
 - [Template Strings](#template-strings)
 - [Additional String Improvements](#additional-string-improvements)
@@ -18,13 +18,13 @@
 - [JavaScript Modules and Using npm](#javascript-modules-and-using-npm)
 - [ES6 Tooling](#es6-tooling)
 
-本篇介紹 Wes Bos 開的課程－[ES6 For Everyone](https://es6.io/)，sample code [Starter File](https://github.com/wesbos/es6.io)
+本篇介紹 Wes Bos 開的課程－[ES6 For Everyone](https://es6.io/)，sample code [Starter File](https://github.com/wesbos/es6.io)
 
 ## New Variables — Creation, Updating and Scoping
 
-ES6 推出新的變數、常數宣告方式，定義較為嚴謹
+ES6 推出新的變數、常數宣告方式，定義較為嚴謹
 
-`var` 是在 ES5 僅有的變數宣告，你可以重新賦值、更新、宣告，`function` 是除了 `global` 之外僅有的作用域
+`var` 是在 ES5 僅有的變數宣告，你可以重新賦值、更新、宣告，`function` 是除了 `global` 之外僅有的作用域
 
 `let` 僅能宣告一次，後續只能更新，作用域為 block
 
@@ -45,7 +45,7 @@ IIFE
 console.log(name);
 ```
 
-ES6 只要加上 block 輕鬆解決
+ES6 只要加上 block 輕鬆解決
 
 ```javascript
   {
@@ -68,7 +68,7 @@ console.log(name);
   }
 ```
 
-### `var` 還有用嗎？
+### `var` 還有用嗎？
 
 [ES2015 const is not about immutability · Mathias Bynens](https://mathiasbynens.be/notes/es6-const) 的說法
 
@@ -82,7 +82,7 @@ console.log(name);
 1. 區域變數使用 `let`
 1. 將極度確定不會變動的變數重構為 `const`
 
-### 參考資料
+### 參考資料
 
 - [ES6 let VS const variables](https://wesbos.com/let-vs-const/)
 - [Is var Dead? What should I use?](https://wesbos.com/is-var-dead/)
