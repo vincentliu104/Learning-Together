@@ -1,3 +1,23 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Chapter 2: Messages](#chapter-2-messages)
+  - [Requests and Responses](#requests-and-responses)
+  - [原始 Requests and Responses](#%E5%8E%9F%E5%A7%8B-requests-and-responses)
+  - [HTTP Request Methods](#http-request-methods)
+    - [Common Scenario - GET](#common-scenario---get)
+    - [Common Scenario - POST](#common-scenario---post)
+    - [Search Scenario](#search-scenario)
+    - [小提醒](#%E5%B0%8F%E6%8F%90%E9%86%92)
+  - [HTTP Request Headers](#http-request-headers)
+  - [The Response](#the-response)
+  - [Response Status Code](#response-status-code)
+  - [Response Header](#response-header)
+  - [參考資料](#%E5%8F%83%E8%80%83%E8%B3%87%E6%96%99)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Chapter 2: Messages
 
 主要介紹 HTTP 傳遞中的 message type, HTTP header, status code，了解這些可以幫助在你開發時，回應正確型態的訊息，也能幫助你發現問題與 debug
@@ -233,15 +253,6 @@ Location:http://odetocode.com
 * Expires: 資源可以快取多久
 * Last-Modified
 
-## 查看 HTTP  message 工具
-
-* Chrome - developer tools
-* [Fiddler](https://www.telerik.com/download/fiddler): 除了查看之外，還可以建立或修改 request
-
 ## 參考資料
 
 * [RFC822](https://tools.ietf.org/html/rfc822)
-* [HTTP 狀態碼](https://developer.mozilla.org/zh-TW/docs/Web/HTTP/Status)
-* [HTTP Status Codes &mdash; httpstatuses.com](https://httpstatuses.com/)
-* [網頁開發人員應了解的 HTTP 狀態碼 | The Will Will Web](https://blog.miniasp.com/post/2009/01/16/Web-developer-should-know-about-HTTP-Status-Code.aspx)
-* [漂亮的 HTTP Response Code Cheatsheet](https://blog.gslin.org/archives/2016/05/25/6596/%E6%BC%82%E4%BA%AE%E7%9A%84-http-response-code-cheatsheet/)
