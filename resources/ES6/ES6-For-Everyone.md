@@ -175,7 +175,73 @@ console.log(calcaluateBill(100));
 
 ## Template Strings
 
-TODO
+過去要用模板，你只能不斷的 `+`，要多行文字還要用 `\`
+
+在 ES6 的世界裡，`${變數}` 可以解救你
+
+變數裡可以是
+
+1. 變數
+1. function
+1. 表達式
+
+```javascript
+const name = '一個巨星的誕生';
+const release = 'October 5, 2018';
+const runtime = '135';
+const sentence = `本週好看電影推薦 ${name} 上映日期： ${release} 片長： ${runtime/60} 小時`;
+
+console.log(sentence);
+```
+
+實際使用時，當然會有物件，並可加入條件式
+
+```javascript
+const movies = [
+  { name: '一個巨星的誕生', release: 'October 5, 2018', runtime: '135'},
+  { name: '波希米亞狂想曲', release: 'November 2, 2018'}
+]
+
+const markup = `
+  <ul class = "movie">
+    ${movies.map(
+      movie => `
+    <li>
+       片名： ${movie.name} 上映日期： ${movie.release} ${movie.runtime ? `片長： ${movie.runtime/60} 小時` : ''}
+    </li>
+      `).join('')}
+  </ul>
+`;
+
+document.body.innerHTML = markup;
+```
+
+### Tagged templates
+
+如果判斷情境複雜(要 `format`, 很多 `if` 等等)時，可以寫個 function 來處理
+
+如果參數很多時，那不就要寫到哭嗎？答案是不用的，參數可以寫成 `strings, ...values`，這裡用到的是 [Rest parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)
+
+要注意的是 `strings` 的數量永遠多於 `values` 的數量
+
+```javascript
+  function highlight(strings, ...values) {
+    let str = '';
+    strings.forEach((string, i) => {
+      str += `${string} <span contenteditable>${values[i] || ''}</span>`;
+    });
+    return str;
+  }
+  const name = '一個巨星的誕生';
+  const release = 'October 5, 2018';
+  const runtime = '135';
+  const sentence = highlight`本週好看電影推薦 ${name} 上映日期： ${release} 片長： ${runtime/60} 小時`;
+  document.body.innerHTML = sentence;
+```
+
+### Snaitizing User Data
+
+所有東西照實呈現出來其實是不安全的(XSS)，`render` 前請服用 [cure53/DOMPurify](https://github.com/cure53/DOMPurify)
 
 ## Additional String Improvements
 
