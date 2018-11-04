@@ -9,6 +9,8 @@
     - [預設 function 參數](#%E9%A0%90%E8%A8%AD-function-%E5%8F%83%E6%95%B8)
     - [Arrow Function 的注意事項](#arrow-function-%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A0%85)
   - [Template Strings](#template-strings)
+    - [Tagged templates](#tagged-templates)
+    - [Snaitizing User Data](#snaitizing-user-data)
   - [Additional String Improvements](#additional-string-improvements)
   - [Destructuring](#destructuring)
   - [Iterables & Looping](#iterables--looping)
