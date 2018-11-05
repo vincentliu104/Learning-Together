@@ -247,7 +247,37 @@ document.body.innerHTML = markup;
 
 ## Additional String Improvements
 
-TODO
+有幾個方便的 String function，要注意他們都是 case sensitive
+
+1. `startsWith`: 檢查字串是不是 ... 開頭，可以略過開頭 N 個字
+1. `endsWith`: 檢查字串是不是 ... 結尾，可以只檢查前 N 個字
+1. `includes`: 檢查字串是不是包含 ...
+1. `repeat`: 重複 N 次
+
+```javascript
+const phone = '0800-987-987';
+const email = 'someone@somdomain.com';
+
+console.log(phone.startsWith('0800')); // true
+console.log(phone.startsWith('987', 5)); // true
+
+console.log(email.endsWith('somdomain.com')); // true
+console.log(email.endsWith('Somdomain.Com')); // false
+console.log(email.endsWith('someone', 7)); // true
+
+console.log(email.includes('somdomain')); // true
+console.log(email.includes('Somdomain')); // false
+
+const coffee = 'Nappuccino';
+const ingredient = 'cafe+nap';
+const sleep_time = '10-20 mins';
+
+function leftPad(str, length = 20) {
+  return `${' '.repeat(length - str.length)}${str}`;
+}
+```
+
+感覺可以寫更簡潔的 code 了
 
 ## Destructuring
 
