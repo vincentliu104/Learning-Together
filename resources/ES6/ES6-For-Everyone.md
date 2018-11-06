@@ -281,7 +281,106 @@ function leftPad(str, length = 20) {
 
 ## Destructuring
 
-TODO
+中文依照 MDN 翻譯為 `解構賦值`，不管是取得物件部分屬性、處理 API response、賦予預設值都很方便
+
+### Destructuring Objects
+
+```javascript
+const marvel_comics_character  = {
+  "first": "Hardy",
+  "last": "Tom",
+  "publisher": "Marvel Comics",
+  "host": "Spider Man",
+  "super_power": "shapeshifting and camouflage"
+};
+
+const { publisher, super_power } = marvel_comics_character; // 取得漫威角色的出版商及超能力
+```
+
+你只想從 API response 取得 wiki 電影介紹和角色介紹
+
+```javascript
+const marvel_comics_character = {
+  "first": "Hardy",
+  "last": "Tom",
+  "links": {
+    "wiki": {
+      "movie_intro": "https://en.wikipedia.org/wiki/Venom_(2018_film)",
+      "maravel_character_intro": "https://en.wikipedia.org/wiki/Venom_(Marvel_Comics_character)"
+    },
+    "trailer": "https://www.youtube.com/watch?v=u9Mv98Gr5pY"
+  },
+  "publisher": "Marvel Comics",
+  "host": "Spider Man",
+  "super_power": "shapeshifting and camouflage"
+};
+
+const { movie_intro: movie, maravel_character_intro: maravel_character } = marvel_comics_character.links.wiki;
+
+console.log(movie, maravel_character);
+```
+
+設定預設值，解構時如果有預設值就不會賦值
+
+```javascript
+const settings = { width: 300, color: 'black' } // height, fontSize
+const { width = 100, height = 100, color = 'blue', fontSize = 25} = settings;
+
+console.log(width, height, color, fontSize);
+```
+
+### Destructuring Arrays
+
+- 為 array 中的元素取名字
+- 取名數量可以少於 array 元素數量
+- 有時候你會拿到逗點分隔的字串，可以用 [split](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split) 轉換成 array 後再解構
+- 如果只有前面幾個重要，剩下的可以利用 [rest operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) 處理
+
+### Swapping Variables with Destructuring
+
+通常做法會用暫存變數處理，久而久之就看不懂他在幹嘛，現在利用解構就可以輕鬆解決
+
+```javascript
+let inRing = 'Hulk Hogan';
+let onSide = 'The Rock';
+console.log(inRing, onSide);
+[inRing, onSide] = [onSide, inRing];
+console.log(inRing, onSide);
+```
+
+### Destructuring Functions - Multiple returns and named defaults
+
+當 function 回傳的物件裡，你只需要幾個屬性時使用
+
+```javascript
+function convertCurrency(amount) {
+   const converted = {
+     USD: amount * 0.76,
+     GPB: amount * 0.53,
+     AUD: amount * 1.01,
+     MEX: amount * 13.30
+   };
+   return converted;
+}
+
+const hundo = convertCurrency(100);
+console.log(hundo.USD);
+console.log(hundo.AUD);
+
+const { AUD, USD } = convertCurrency(100);;
+console.log(USD, AUD);
+```
+
+function 參數解構時，要注意所有參數都有預設值的時候，你要額外再把 function 參數給解構
+
+```javascript
+  function tipCalc({ total = 100, tip = 0.15, tax = 0.13 } = {}) {
+    return total + (tip * total) + (tax * total);
+  }
+  const bill1 = tipCalc({ tip: 0.20, total: 200 });
+  const bill2 = tipCalc();
+  console.log(bill1, bill2);
+```
 
 ## Iterables & Looping
 
