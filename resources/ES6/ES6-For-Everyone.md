@@ -1,6 +1,6 @@
 # ES6 For Everyone
 
-本篇介紹 Wes Bos 開的課程－[ES6 For Everyone](https://es6.io/)，sample code [Starter File](https://github.com/wesbos/es6.io)
+本篇介紹 Wes Bos 開的課程－[ES6 For Everyone](https://es6.io/)，sample code [Starter File](https://github.com/wesbos/es6.io)
 
 - [New Variables — Creation, Updating and Scoping](#new-variables--creation-updating-and-scoping)
   - [範例](#%E7%AF%84%E4%BE%8B)
