@@ -1,5 +1,7 @@
 # ES6 For Everyone
 
+本篇介紹 Wes Bos 開的課程－[ES6 For Everyone](https://es6.io/)，sample code [Starter File](https://github.com/wesbos/es6.io)
+
 - [New Variables — Creation, Updating and Scoping](#new-variables--creation-updating-and-scoping)
   - [範例](#%E7%AF%84%E4%BE%8B)
   - [`var` 還有用嗎？](#var-%E9%82%84%E6%9C%89%E7%94%A8%E5%97%8E)
@@ -385,7 +387,165 @@ function 參數解構時，要注意所有參數都有預設值的時候，你�
 
 ## Iterables & Looping
 
-TODO
+Iterable：任何可以 loop 的東西(DOM, collection, arguments, string, array, map, set)，以下介紹幾類
+
+- 普通
+- forEach
+- for in
+- for of
+- for of by entries()
+- arguments
+- string
+- objects
+
+普通的寫法會比較囉唆、不好懂，要設定 index 變數，還要用 index 取得元素
+
+```javascript
+const maps = ['Asia', 'Africa', 'Europe', 'North America', 'Oceania', 'South America'];
+
+for (let i = 0; i < maps.length; i++) {
+  console.log(maps[i]);
+}
+```
+
+forEach 使用時，無法中斷(break, continue)
+
+```javascript
+const maps = ['Asia', 'Africa', 'Europe', 'North America', 'Oceania', 'South America'];
+
+maps.forEach( (map) => {
+  console.log(map);
+});
+```
+
+for in 讓你可以使用 index 取得元素
+
+```javascript
+const maps = ['Asia', 'Africa', 'Europe', 'North America', 'Oceania', 'South America'];
+
+for (const index in maps) {
+  console.log(maps[index]);
+}
+```
+
+使用時 for in 時，改變 Array 的元素或 prototype，他們都會出現，某些 library 就會做這些事，例如 [MooTools](https://mootools.net/)
+
+```javascript
+Array.prototype.shuffle = function() {
+    var input = this;
+  
+    for (var i = input.length-1; i >=0; i--) {
+      var randomIndex = Math.floor(Math.random()*(i+1));
+      var itemAtIndex = input[randomIndex];
+
+      input[randomIndex] = input[i];
+      input[i] = itemAtIndex;
+    }
+    return input;
+}
+
+const maps = ['Asia', 'Africa', 'Europe', 'North America', 'Oceania', 'South America'];
+
+maps.shop = '7-11';
+
+for (const index in maps) {
+  console.log(index, maps[index]);
+}
+```
+
+for of 除了物件以外都可以使用，並可中斷
+
+```javascript
+const maps = ['Asia', 'Africa', 'Europe', 'North America', 'Oceania', 'South America'];
+
+for (const map of maps) {
+  if (map == 'North America') {
+    break;
+  }
+  console.log(map);
+}
+```
+
+for of 想要取得 index 時，利用 `entries()` 並解構
+
+```javascript
+const maps = ['Asia', 'Africa', 'Europe', 'North America', 'Oceania', 'South America'];
+
+for (const [index, map] of maps.entries()) {
+  console.log(`item ${index + 1} is ${map}`);
+}
+```
+
+arguments 的 prototype 是 Object，使用時要先轉換成 array
+
+```javascript
+function addNums() {
+  let sum = 0;
+  for (num of arguments) {
+    sum += num;
+  }
+  console.log(sum);
+  return sum;
+}
+
+addNums(24,54,32,78,90);
+```
+
+字串也可以處理
+
+```javascript
+const greeting = 'hello, how are you?';
+for (const char of greeting) {
+  console.log(char);
+}
+```
+
+for of 可以利用用在非 array 的 Iterables
+
+範例：取用所有的 paragraph
+
+```javascript
+const paragraph = document.querySelectorAll('p'); // prototype is NodeList
+
+for ( const item of paragraph) {
+  console.log(item);
+
+  item.addEventListener('click', function(){
+    console.log(this.textContent);
+  })
+}
+```
+
+影片錄製時 Object 還無法 iterate，因為 `Object.entires` 制定中 ([TC39](https://github.com/tc39/proposal-object-values-entries))，想用的話要使用 polyfill [object.entries](https://github.com/es-shims/Object.entries)
+
+MDN 顯示已經支援 [Object.entries()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries)
+
+```javascript
+// 使用 Object.entries
+  const apple = {
+    color: 'Red',
+    size: 'Medium',
+    weight: 50,
+    sugar: 10
+  };
+  for (const [index, item] of Object.entries(apple)) {
+    console.log(index, item);
+  }
+```
+
+```javascript
+// 使用 for in
+  const apple = {
+    color: 'Red',
+    size: 'Medium',
+    weight: 50,
+    sugar: 10
+  };
+  for (const prop in apple) {
+    const value = apple[prop];
+    console.log(value, prop);
+  }
+```
 
 ## An Array of Array Improvements
 
