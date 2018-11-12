@@ -20,6 +20,9 @@
   - [Destructuring Functions - Multiple returns and named defaults](#destructuring-functions---multiple-returns-and-named-defaults)
 - [Iterables & Looping](#iterables--looping)
 - [An Array of Array Improvements](#an-array-of-array-improvements)
+  - [Array.from and Array.of](#arrayfrom-and-arrayof)
+  - [Array.find and Array.findIndex](#arrayfind-and-arrayfindindex)
+  - [Array.some and Arra.every](#arraysome-and-arraevery)
 - [Say Hello to ...Spread and ...Rest](#say-hello-to-spread-and-rest)
 - [Object Literal Upgrades](#object-literal-upgrades)
 - [Promises](#promises)
@@ -549,7 +552,172 @@ MDN 顯示已經支援 [Object.entries()](https://developer.mozilla.org/en-US/do
 
 ## An Array of Array Improvements
 
-TODO
+### Array.from and Array.of
+
+有時候，取得的物件的 prototype 並不會是 `Array`，例如 `document.querySelector` 系列，你會得到 `NodeList`
+
+```html
+  <div class="monster">
+    <p>殭屍</p>
+    <p>鱷魚</p>
+    <p>外星人</p>
+  </div>
+```
+
+這時可以利用 [`Array.from`](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/from) 將 `NodeList` 轉換成 `Array`
+
+```javascript
+const monsters = Array.from(document.querySelectorAll('.monster p'));
+const names = monsters.map(monster => monster.textContent);
+console.log(names);
+```
+
+```javascript
+const monsters = document.querySelectorAll('.monster p');
+const monstersArray = Array.from(monsters, monster => {
+  console.log(monster);
+  return monster.textContent;
+  });
+console.log(monstersArray);
+```
+
+使用 `arguments` 時也要轉換
+
+```javascript
+function sumAll() {
+  const nums = Array.from(arguments);
+  return nums.reduce((prev, next) => prev + next, 0);
+}
+console.log(sumAll(1, 2, 3, 4, 5, 6, 7, 8, 9. 10));
+```
+
+[Array.of](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/of) 可直接把 `arguments` 轉換成 `Array`
+
+```javascript
+const ages = Array.of(12, 4, 23, 62, 34);
+console.log(ages);
+```
+
+### Array.find and Array.findIndex
+
+主要是用來找 Array 中的數值或 index
+
+例如 [Instagram API](https://www.instagram.com/developer/endpoints/media/)，你只要 id 為 20988202 資料
+
+```javascript
+var posts = [
+    {
+        "distance": 41.741369194629698,
+        "type": "image",
+        "users_in_photo": [],
+        "filter": "Earlybird",
+        "tags": [],
+        "comments": {
+            "count": 2
+        },
+        "caption": null,
+        "likes": {
+            "count": 1
+        },
+        "link": "http://instagr.am/p/BQEEq/",
+        "user": {
+            "username": "mahaface",
+        },
+        "created_time": "1296251679",
+        "images": {
+            "low_resolution": {
+                "url": "http://distillery.s3.amazonaws.com/media/2011/01/28/0cc4f24f25654b1c8d655835c58b850a_6.jpg",
+                "width": 306,
+                "height": 306
+            },
+            "thumbnail": {
+                "url": "http://distillery.s3.amazonaws.com/media/2011/01/28/0cc4f24f25654b1c8d655835c58b850a_5.jpg",
+                "width": 150,
+                "height": 150
+            },
+            "standard_resolution": {
+                "url": "http://distillery.s3.amazonaws.com/media/2011/01/28/0cc4f24f25654b1c8d655835c58b850a_7.jpg",
+                "width": 612,
+                "height": 612
+            }
+        },
+        "id": "20988202",
+        "location": null
+    },
+    {
+        "distance": 41.741369194629698,
+        "type": "video",
+        "videos": {
+            "low_resolution": {
+                "url": "http://distilleryvesper9-13.ak.instagram.com/090d06dad9cd11e2aa0912313817975d_102.mp4",
+                "width": 480,
+                "height": 480
+            },
+            "standard_resolution": {
+                "url": "http://distilleryvesper9-13.ak.instagram.com/090d06dad9cd11e2aa0912313817975d_101.mp4",
+                "width": 640,
+                "height": 640
+            },
+        "users_in_photo": null,
+        "filter": "Vesper",
+        "tags": [],
+        "comments": {
+            "count": 2
+        },
+        "caption": null,
+        "likes": {
+            "count": 1
+        },
+        "link": "http://instagr.am/p/D/",
+        "user": {
+            "username": "kevin",
+        },
+        "created_time": "1279340983",
+        "images": {
+            "low_resolution": {
+                "url": "http://distilleryimage2.ak.instagram.com/11f75f1cd9cc11e2a0fd22000aa8039a_6.jpg",
+                "width": 306,
+                "height": 306
+            },
+            "thumbnail": {
+                "url": "http://distilleryimage2.ak.instagram.com/11f75f1cd9cc11e2a0fd22000aa8039a_5.jpg",
+                "width": 150,
+                "height": 150
+            },
+            "standard_resolution": {
+                "url": "http://distilleryimage2.ak.instagram.com/11f75f1cd9cc11e2a0fd22000aa8039a_7.jpg",
+                "width": 612,
+                "height": 612
+            }
+        },
+        "id": "3",
+        "location": null
+    }
+  }
+];
+
+const id = '20988202';
+const post = posts.find(post => post.id === id);
+console.log(post);
+
+const postIndex = posts.findIndex(post => post.id === id);
+console.log(postIndex);
+```
+
+### Array.some and Arra.every
+
+用來判斷 Array 中的元素，部份或是全部的元素符合條件
+
+```javascript
+const ages = [32, 15, 19, 12];
+// 👵👨 is there at least one adult in the group?
+const adultPresent = ages.some(age => age >= 18);
+console.log(adultPresent);
+
+// 🍻 is everyone old enough to drink?
+const allOldEnough = ages.every(age => age >= 19);
+console.log(allOldEnough);
+```
 
 ## Say Hello to ...Spread and ...Rest
 
