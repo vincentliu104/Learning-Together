@@ -24,6 +24,8 @@
   - [Array.find and Array.findIndex](#arrayfind-and-arrayfindindex)
   - [Array.some and Arra.every](#arraysome-and-arraevery)
 - [Say Hello to ...Spread and ...Rest](#say-hello-to-spread-and-rest)
+  - [Spread - 展開運算子](#spread---%E5%B1%95%E9%96%8B%E9%81%8B%E7%AE%97%E5%AD%90)
+  - [Rest - 其餘運算子](#rest---%E5%85%B6%E9%A4%98%E9%81%8B%E7%AE%97%E5%AD%90)
 - [Object Literal Upgrades](#object-literal-upgrades)
 - [Promises](#promises)
 - [Symbols](#symbols)
@@ -721,7 +723,63 @@ console.log(allOldEnough);
 
 ## Say Hello to ...Spread and ...Rest
 
-TODO
+主要運用在 Iterable，免去使用 index，增加設計上的彈性
+
+### [Spread](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Operators/Spread_syntax) - 展開運算子
+
+用來操作 Iterable 的元素
+
+串連 array
+
+```javascript
+const breakfast = ['鹹豆漿', '蛋餅', '蘿蔔糕'];
+const lunch = ['玫瑰油雞便當', '脆皮燒肉飯', '黯然銷魂飯'];
+const brunch = breakfast.concat(lunch);
+console.log(brunch);
+```
+
+串連 array & 增加元素
+
+```javascript
+const breakfast = ['鹹豆漿', '蛋餅', '蘿蔔糕'];
+const lunch = ['玫瑰油雞便當', '脆皮燒肉飯', '黯然銷魂飯'];
+let brunch = [];
+brunch =  brunch.concat(breakfast);
+brunch.push('廣東粥');
+brunch =  brunch.concat(brunch);
+console.log(brunch);
+```
+
+利用 Spread 串連 array & 增加元素
+
+```javascript
+const breakfast = ['鹹豆漿', '蛋餅', '蘿蔔糕'];
+const lunch = ['玫瑰油雞便當', '脆皮燒肉飯', '黯然銷魂飯'];
+const brunch = [...breakfast, '廣東粥', ...lunch];
+console.log(brunch);
+```
+
+乾淨的複製 array
+
+```javascript
+const lunch = ['玫瑰油雞便當', '脆皮燒肉飯', '黯然銷魂飯'];
+let dinner1 = [].concat(lunch);
+dinner1[0] = '生菜沙拉';
+let dinner2 = [...lunch];
+console.log(dinner1, dinner2);
+```
+
+Example: <https://codepen.io/vincentliu99999/pen/QJpJNN>
+
+### [Rest](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) - 其餘運算子
+
+如果 function 或解構的參數，數量不確定時使用
+
+```javascript
+const baker = ['吳寶春', '世界第一麥方', '酒釀桂圓麵包', '荔枝玫瑰麵包'];
+const [name, movie, ...bread] = baker;
+console.log(name, movie, bread);
+```
 
 ## Object Literal Upgrades
 
