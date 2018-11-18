@@ -783,7 +783,65 @@ console.log(name, movie, bread);
 
 ## Object Literal Upgrades
 
-TODO
+[物件實體語法](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#%E5%AF%B9%E8%B1%A1%E5%AD%97%E9%9D%A2%E9%87%8F_(Object_literals)) 指的是直接利用 `{}` 將屬性包在物件裡，以下將介紹進階用法
+
+屬性名稱與變數名稱相同時，可以省略
+
+```javascript
+  const first = 'snickers';
+  const last = 'bos';
+  const age = 2;
+  const breed = 'King Charles Cav';
+  const dog = {
+    firstName: first,
+    last,
+    age,
+    breed,
+    pals: ['Hugo', 'Sunny']
+  };
+  console.log(dog);
+```
+
+物件方法可以省略 `:function`
+
+```javascript
+  const modal = {
+    create(selector) {
+    },
+    open(content) {
+    },
+    close(goodbye) {
+    }
+  }
+```
+
+利用 `template string` 產生屬性名稱
+
+```javascript
+  function invertColor(color) {
+      return '#' + ("000000" + (0xFFFFFF ^ parseInt(color.substring(1),16)).toString(16)).slice(-6);
+  }
+  const key = 'pocketColor';
+  const value = '#ffc600';
+  const tShirt = {
+    [key]: value,
+    [`${key}Opposite`]: invertColor(value)
+  };
+  console.log(tShirt);
+```
+
+屬性名稱與數值在不同的陣列時，可利用 [`shift`](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/shift)
+
+```javascript
+  const keys = ['size', 'color', 'weight'];
+  const values = ['medium', 'red', 100];
+  const shirt = {
+    [keys.shift()]: values.shift(),
+    [keys.shift()]: values.shift(),
+    [keys.shift()]: values.shift(),
+  }
+  console.log(shirt);
+```
 
 ## Promises
 
