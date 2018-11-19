@@ -843,9 +843,153 @@ console.log(name, movie, bread);
   console.log(shirt);
 ```
 
-## Promises
+## [Promises](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 
-TODO
+### Promises 基本介紹
+
+主要是用來取得 API 的回應，由於 API 並不會立馬回應你，所以會需要 call back 處理
+
+例如 jQuery 提供了 `$.getJSON`, `$.ajax`
+
+ES6 提供方便的 `fetch`, `then`, `catch` 讓你輕鬆處理非即時的回應
+
+```javascript
+const postsPromise = fetch('https://wesbos.com/wp-json/wp/v2/posts');
+postsPromise
+  .then(data => data.json())
+  .then(data => { console.log(data) })
+  .catch((err) => {
+    console.error(err);
+  })
+```
+
+### 建立 Promises
+
+處理背景作業或 ajax 時，可定義成功([resolve](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve))或失敗([reject](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject))時該如何處理
+
+[JavaScript ES6 Promise](https://wcc723.github.io/life/2017/05/25/promise/) 這篇比較簡單易懂
+
+```javascript
+  const p = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      reject(Error('Err wes isn\'t cool'));
+    }, 1000);
+  });
+  p
+    .then(data => {
+      console.log(data);
+    })
+    .catch(err => {
+      console.error(err);
+    });
+```
+
+### Chaining Promises + Flow Control
+
+有時候一次的 `fetch` 並不能讓你得到所有的資料，比方說 `書籍` + `作者` + `blablabla`，這時你需要把他們給串連
+
+也就是在 `fetch` 末端再回傳新的 `Promises`，各自處理各自的邏輯
+
+```javascript
+  const posts = [
+    { title: 'I love JavaScript', author: 'Wes Bos', id: 1 },
+    { title: 'CSS!', author: 'Chris Coyier', id: 2 },
+    { title: 'Dev tools tricks', author: 'Addy Osman', id: 3 },
+  ];
+  const authors = [
+    { name: 'Wes Bos', twitter: '@wesbos', bio: 'Canadian Developer' },
+    { name: 'Chris Coyier', twitter: '@chriscoyier', bio: 'CSS Tricks and CodePen' },
+    { name: 'Addy Osmani', twitter: '@addyosman', bio: 'Googler' },
+  ];
+  function getPostById(id) {
+    // create a new promise
+    return new Promise((resolve, reject) => {
+      // using a settimeout to mimick a databse
+      setTimeout(() => {
+        // find the post we want
+        const post = posts.find(post => post.id === id);
+        if(post) {
+          resolve(post); // send the post back
+        } else {
+          reject(Error('No Post Was Found!'));
+        }
+      }, 200);
+    });
+  }
+  function hydrateAuthor(post) {
+    // create a new promise
+    return new Promise((resolve, reject) => {
+      // find the author
+      const authorDetails = authors.find(person => person.name === post.author);
+      if(authorDetails) {
+        // "hydrate" the post object with the author object
+        post.author = authorDetails;
+        resolve(post);
+      } else {
+        reject(Error('Can not find the author'));
+      }
+    });
+  }
+
+  getPostById(1)
+    .then(post => {
+      return hydrateAuthor(post);
+    })
+    .then(post => {
+      console.log(post);
+    })
+    .catch(err => {
+      console.error(err);
+    });
+
+  getPostById(3)
+    .then(post => {
+      return hydrateAuthor(post);
+    })
+    .then(post => {
+      console.log(post);
+    })
+    .catch(err => {
+      console.error(err);
+    });
+```
+
+### 同時處理多個 Promises
+
+如同煮菜，料要備齊了才能開始下鍋，API 也是一樣，不過需要 `Promises.all` 來協助
+
+他會等到所有的 `Promises` 都收到後才會處理
+
+如果要在本機測試，請試用 [Browsersync](https://www.browsersync.io/)
+
+```javascript
+  const weather = new Promise((resolve) => {
+    setTimeout(() => {
+      resolve({ temp: 29, conditions: 'Sunny with Clouds'});
+    }, 2000);
+  });
+  const tweets = new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(['I like cake', 'BBQ is good too!']);
+    }, 500);
+  });
+  Promise
+    .all([weather, tweets])
+    .then(responses => {
+      const [weatherInfo, tweetInfo] = responses;
+      console.log(weatherInfo, tweetInfo)
+    });
+  const postsPromise = fetch('https://wesbos.com/wp-json/wp/v2/posts');
+  const streetCarsPromise = fetch('http://data.ratp.fr/api/datasets/1.0/search/?q=paris');
+  Promise
+    .all([postsPromise, streetCarsPromise])
+    .then(responses => {
+      return Promise.all(responses.map(res => res.json()))
+    })
+    .then(responses => {
+      console.log(responses);
+    });
+```
 
 ## Symbols
 
