@@ -1,3 +1,17 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Chapter 1: Resources](#chapter-1-resources)
+  - [Resources Locators](#resources-locators)
+  - [Ports, Query Strings and Fragments](#ports-query-strings-and-fragments)
+  - [URL Encoding](#url-encoding)
+  - [Resources and Media Types](#resources-and-media-types)
+  - [Content Type Negotiation](#content-type-negotiation)
+  - [參考資料](#%E5%8F%83%E8%80%83%E8%B3%87%E6%96%99)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Chapter 1: Resources
 
 HTTP address 是最為人所知的 web，比方說你想查關鍵字你會到 <https://google.com> 去搜尋
