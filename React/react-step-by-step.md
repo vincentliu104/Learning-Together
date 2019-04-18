@@ -98,6 +98,66 @@ this.setState((state, props) => ({
 }));
 ```
 
+## [事件處理(Handling Events)](https://reactjs.org/docs/handling-events.html)
+
+* 使用駝峰氏命名
+* JSX 傳遞 function 名稱而非字串
+* 取消預設行為要用 `preventDefault` 而非 `return false`
+* 用 `bind` 綁定事件: constructor `this.handleClick = this.handleClick.bind(this);` [Sample](https://codepen.io/gaearon/pen/xEmzGg?editors=0010)
+* 免 `bind` 綁定事件
+  1. class fields syntax: `handleClick = () =>`
+  2. arrow function: `<button onClick={(e) => this.handleClick(e)}>`，因在 render 時，都會產生不同的 callback，傳到低層的 component 會需要額外 render，不建議使用
+
+```javascript
+function ActionLink() {
+  function handleClick(e) {
+    e.preventDefault();
+    console.log('The link was clicked.');
+  }
+
+  return (
+    <a href="#" onClick={handleClick}>
+      Click me
+    </a>
+  );
+}
+```
+
+```javascript
+// class fields syntax
+class LoggingButton extends React.Component {
+  // This syntax ensures `this` is bound within handleClick.
+  // Warning: this is *experimental* syntax.
+  handleClick = () => {
+    console.log('this is:', this);
+  }
+
+  render() {
+    return (
+      <button onClick={this.handleClick}>
+        Click me
+      </button>
+    );
+  }
+}
+
+// arrow function
+class LoggingButton extends React.Component {
+  handleClick() {
+    console.log('this is:', this);
+  }
+
+  render() {
+    // This syntax ensures `this` is bound within handleClick
+    return (
+      <button onClick={(e) => this.handleClick(e)}>
+        Click me
+      </button>
+    );
+  }
+}
+```
+
 ## 工具
 
 ### IDE
