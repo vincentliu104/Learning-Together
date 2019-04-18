@@ -84,6 +84,20 @@ ReactDOM.render(
 );
 ```
 
+## [State and Lifecycle](https://reactjs.org/docs/state-and-lifecycle.html)
+
+* `constructor` 接收 props(來自 parent component), 設定 state
+  * 設定/更新 state: `this.setstate`
+  * 取用 state: `this.state.變數名稱`
+* `componentDidMount` component 渲染到 DOM 後執行
+* 更新 state 可能會以非同步方式進行
+
+```javascript
+this.setState((state, props) => ({
+  counter: state.counter + props.increment
+}));
+```
+
 ## 工具
 
 ### IDE
