@@ -275,12 +275,21 @@ function NumberList(props) {
 }
 ```
 
+## [表單(Forms)](https://reactjs.org/docs/forms.html)
+
+* 透過事件觸發 `setState` UI 才會更新
+* Controlled Components 取值
+  * input, textarea, select: `event.target.value`
+  * checkbox: `event.target.checked`
+* Uncontrolled Components: file
+
 ## 工具
 
 ### IDE
 
 * [Editors · Babel](https://babeljs.io/docs/en/editors/)
 * [Get Oceanic Next Color Scheme](https://labs.voronianski.com/oceanic-next-color-scheme/)
+* [Formik](https://jaredpalmer.com/formik/) 表單處理 library
 
 ### 練習工具
 
