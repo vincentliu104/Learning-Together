@@ -183,7 +183,7 @@ class LoggingButton extends React.Component {
       </div>
     );
   }
-  
+
 // 行內邏輯與運算1
 function Mailbox(props) {
   const unreadMessages = props.unreadMessages;
@@ -210,6 +210,67 @@ render() {
         <LoginButton onClick={this.handleLoginClick} />
       )}
     </div>
+  );
+}
+```
+
+## [Lists and Keys](https://reactjs.org/docs/lists-and-keys.html)
+
+* 透過 [map](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
+* key 可幫助 React 識別哪個項目有新增、修改、刪除
+  * key 必須是獨一無二的
+  * 真的沒有 key 時，可用 index(不建議使用)
+
+```javascript
+// 渲染多個項目1
+const numbers = [1, 2, 3, 4, 5];
+const listItems = numbers.map((number) =>
+  <li>{number}</li>
+);
+
+// 渲染多個項目2
+function NumberList(props) {
+  const numbers = props.numbers;
+  const listItems = numbers.map((number) =>
+    <li key={number.toString()}>
+      {number}
+    </li>
+  );
+  return (
+    <ul>{listItems}</ul>
+  );
+}
+
+// 使用 key
+function ListItem(props) {
+  return <li>{props.value}</li>;
+}
+
+function NumberList(props) {
+  const numbers = props.numbers;
+  const listItems = numbers.map((number) =>
+    <ListItem key={number.toString()}
+              value={number} />
+
+  );
+  return (
+    <ul>
+      {listItems}
+    </ul>
+  );
+}
+
+// JSX 使用 key
+function NumberList(props) {
+  const numbers = props.numbers;
+  return (
+    <ul>
+      {numbers.map((number) =>
+        <ListItem key={number.toString()}
+                  value={number} />
+
+      )}
+    </ul>
   );
 }
 ```
