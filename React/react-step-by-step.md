@@ -282,6 +282,7 @@ function NumberList(props) {
   * input, textarea, select: `event.target.value`
   * checkbox: `event.target.checked`
   * 如果有固定的 value，Component 會是唯讀狀態，但如果 value 變成 `undefined` 或 `null` 時，Component 會變成可編輯的狀態
+* 如果表單有很多 element 要控制的話可以參考 [Handling Multiple Inputs](https://reactjs.org/docs/forms.html#handling-multiple-inputs)
 * Uncontrolled Components: file
 
 ```javascript
