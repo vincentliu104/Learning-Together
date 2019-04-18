@@ -281,7 +281,23 @@ function NumberList(props) {
 * Controlled Components 取值
   * input, textarea, select: `event.target.value`
   * checkbox: `event.target.checked`
+  * 如果有固定的 value，Component 會是唯讀狀態，但如果 value 變成 `undefined` 或 `null` 時，Component 會變成可編輯的狀態
 * Uncontrolled Components: file
+
+```javascript
+    return (
+      <form onSubmit={this.handleSubmit}>
+        <label>
+          Name:
+          <input type="text" value={this.state.value} onChange={this.handleChange} />
+        </label>
+        <input type="submit" value="Submit" />
+      </form>
+    );
+
+// 多選項
+<select multiple={true} value={['B', 'C']}>
+```
 
 ## 工具
 
