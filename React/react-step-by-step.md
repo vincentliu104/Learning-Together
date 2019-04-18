@@ -158,6 +158,62 @@ class LoggingButton extends React.Component {
 }
 ```
 
+## [條件式渲染(Conditional Rendering)](https://reactjs.org/docs/conditional-rendering.html)
+
+1. 透過 element 變數做判斷
+2. 行內邏輯與運算
+3. 防止渲染 `return null`
+
+```javascript
+// 透過 element 變數做判斷
+  render() {
+    const isLoggedIn = this.state.isLoggedIn;
+    let button;
+
+    if (isLoggedIn) {
+      button = <LogoutButton onClick={this.handleLogoutClick} />;
+    } else {
+      button = <LoginButton onClick={this.handleLoginClick} />;
+    }
+
+    return (
+      <div>
+        <Greeting isLoggedIn={isLoggedIn} />
+        {button}
+      </div>
+    );
+  }
+  
+// 行內邏輯與運算1
+function Mailbox(props) {
+  const unreadMessages = props.unreadMessages;
+  return (
+    <div>
+      <h1>Hello!</h1>
+      {unreadMessages.length > 0 &&
+        <h2>
+          You have {unreadMessages.length} unread messages.
+        </h2>
+      }
+    </div>
+  );
+}
+
+// 行內邏輯與運算2
+render() {
+  const isLoggedIn = this.state.isLoggedIn;
+  return (
+    <div>
+      {isLoggedIn ? (
+        <LogoutButton onClick={this.handleLogoutClick} />
+      ) : (
+        <LoginButton onClick={this.handleLoginClick} />
+      )}
+    </div>
+  );
+}
+```
+
 ## 工具
 
 ### IDE
