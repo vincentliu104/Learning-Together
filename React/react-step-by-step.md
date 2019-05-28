@@ -41,7 +41,7 @@ const element = <div tabIndex="0"></div>;
 const element = <img src={user.avatarUrl}></img>;
 ```
 
-## [渲染元素(Rendering Elements)](https://reactjs.org/docs/rendering-elements.html)
+### [渲染元素(Rendering Elements)](https://reactjs.org/docs/rendering-elements.html)
 
 * React element 都是 Object
 * 透過 `ReactDOM.render` 渲染 React element，且只能透過 `ReactDOM.render` 來更新
@@ -51,7 +51,7 @@ const element = <h1>Hello, world</h1>;
 ReactDOM.render(element, document.getElementById('root'));
 ```
 
-## [Components and Props](https://reactjs.org/docs/components-and-props.html)
+### [Components and Props](https://reactjs.org/docs/components-and-props.html)
 
 可以把 `Component` 想像成 Javascript function, Props 則為 function input
 
@@ -84,7 +84,7 @@ ReactDOM.render(
 );
 ```
 
-## [State and Lifecycle](https://reactjs.org/docs/state-and-lifecycle.html)
+### [State and Lifecycle](https://reactjs.org/docs/state-and-lifecycle.html)
 
 * `constructor` 接收 props(來自 parent component), 設定 state
   * 設定/更新 state: `this.setstate`
@@ -98,7 +98,7 @@ this.setState((state, props) => ({
 }));
 ```
 
-## [事件處理(Handling Events)](https://reactjs.org/docs/handling-events.html)
+### [事件處理(Handling Events)](https://reactjs.org/docs/handling-events.html)
 
 * 使用駝峰氏命名
 * JSX 傳遞 function 名稱而非字串
@@ -158,7 +158,7 @@ class LoggingButton extends React.Component {
 }
 ```
 
-## [條件式渲染(Conditional Rendering)](https://reactjs.org/docs/conditional-rendering.html)
+### [條件式渲染(Conditional Rendering)](https://reactjs.org/docs/conditional-rendering.html)
 
 1. 透過 element 變數做判斷
 2. 行內邏輯與運算
@@ -214,7 +214,7 @@ render() {
 }
 ```
 
-## [Lists and Keys](https://reactjs.org/docs/lists-and-keys.html)
+### [Lists and Keys](https://reactjs.org/docs/lists-and-keys.html)
 
 * 透過 [map](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
 * key 可幫助 React 識別哪個項目有新增、修改、刪除
@@ -275,7 +275,7 @@ function NumberList(props) {
 }
 ```
 
-## [表單(Forms)](https://reactjs.org/docs/forms.html)
+### [表單(Forms)](https://reactjs.org/docs/forms.html)
 
 * 透過事件觸發 `setState` UI 才會更新
 * Controlled Components 取值
@@ -300,7 +300,7 @@ function NumberList(props) {
 <select multiple={true} value={['B', 'C']}>
 ```
 
-## 昇華 state(Lift the State Up)
+### 昇華 state(Lift the State Up)
 
 情境: 攝氏溫度計與華氏溫度計需要偵測水滾了沒，並能顯示另一個溫度計轉換成自身單位時的溫度
 
@@ -308,6 +308,8 @@ function NumberList(props) {
 * 如果會根據不同資料來源並在 state 裡，且有不同呈現方式的話，可以考慮把它移至最接近的共同 parent component
 * 如果是由 props 或 state 可計算出結果的，那麼就不要把它存放在 state 裡
 * 偵錯工具: [React Developer Tools](https://github.com/facebook/react-devtools)，可查看 state, props 的改變
+
+
 
 ## 工具
 
