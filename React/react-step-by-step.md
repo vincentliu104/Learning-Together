@@ -309,7 +309,25 @@ function NumberList(props) {
 * 如果是由 props 或 state 可計算出結果的，那麼就不要把它存放在 state 裡
 * 偵錯工具: [React Developer Tools](https://github.com/facebook/react-devtools)，可查看 state, props 的改變
 
+### 該用組合還是繼承(Composition vs Inheritance)
 
+React 提供強大的 composition model，所以推薦使用組合
+
+* 據說 Facebook 使用上千組的 component，還沒有找到使用繼承的情境
+* 透過 props 及組合可以讓你明確且安的方式，更有彈性的客製化 component 的樣貌及行為
+* 如果要重複使用與 UI 無關的功能可抽出至 JavaScript module，component 透過 import 方式運用
+
+#### 普通容器
+
+當 child component 還不那麼明確時，可直接傳遞 `children` props 到 childern element
+
+例如: 側邊欄、對話框
+
+#### 特殊規格
+
+特規的 component 透過 props render 普通的 component
+
+例如: 歡迎對話框
 
 ## 工具
 
