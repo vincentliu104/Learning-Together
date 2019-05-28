@@ -300,6 +300,15 @@ function NumberList(props) {
 <select multiple={true} value={['B', 'C']}>
 ```
 
+## 昇華 state(Lift the State Up)
+
+情境: 攝氏溫度計與華氏溫度計需要偵測水滾了沒，並能顯示另一個溫度計轉換成自身單位時的溫度
+
+* 實際資料來源應只有一個地方
+* 如果會根據不同資料來源並在 state 裡，且有不同呈現方式的話，可以考慮把它移至最接近的共同 parent component
+* 如果是由 props 或 state 可計算出結果的，那麼就不要把它存放在 state 裡
+* 偵錯工具: [React Developer Tools](https://github.com/facebook/react-devtools)，可查看 state, props 的改變
+
 ## 工具
 
 ### IDE
