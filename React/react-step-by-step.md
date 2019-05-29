@@ -300,7 +300,7 @@ function NumberList(props) {
 <select multiple={true} value={['B', 'C']}>
 ```
 
-### 昇華 state(Lift the State Up)
+### [昇華 state(Lift the State Up)](https://reactjs.org/docs/lifting-state-up.html)
 
 情境: 攝氏溫度計與華氏溫度計需要偵測水滾了沒，並能顯示另一個溫度計轉換成自身單位時的溫度
 
@@ -309,7 +309,7 @@ function NumberList(props) {
 * 如果是由 props 或 state 可計算出結果的，那麼就不要把它存放在 state 裡
 * 偵錯工具: [React Developer Tools](https://github.com/facebook/react-devtools)，可查看 state, props 的改變
 
-### 該用組合還是繼承(Composition vs Inheritance)
+### [該用組合還是繼承(Composition vs Inheritance)](https://reactjs.org/docs/composition-vs-inheritance.html)
 
 React 提供強大的 composition model，所以推薦使用組合
 
@@ -328,6 +328,34 @@ React 提供強大的 composition model，所以推薦使用組合
 特規的 component 透過 props render 普通的 component
 
 例如: 歡迎對話框
+
+### [React 思考模式(Thinking in React)](https://reactjs.org/docs/thinking-in-react.html)
+
+1. 將 UI 分解為 component 結構
+    * component 都用畫出方框，可與設計師討論，也許他已經做了
+    * 運用[單一功能原則](https://en.wikipedia.org/wiki/Single_responsibility_principle)設計 component
+    * data model 盡量與 UI 對應
+1. 開發出穩定的版本
+    * UI 與互動分離，先使用 props 就好
+    * 需要互動之處 props 改為 state
+    * 開發方式
+      * top-down 通常適合大型專案
+      * button-up 通常適合一邊測試一編 coding
+    * props 與 state 的區別請參考[State and Lifecycle](#State-and-Lifecycle)
+1. 識別 UI 狀態最少的表示方式
+    * 最小化可變動的 state
+    * 關鍵: [DRY: Don’t Repeat Yourself](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)
+    * 自我詢問三項問題關於資料的問題，如果是的話，很大機率他應該不是 state
+      1. 資料是否可由 parent 傳遞的 props 取得
+      1. 任何時間是否都保持不變
+      1. 是否可由 component 中的 state 或 prop 計算後得出
+1. 識別程式中的 state
+    * 識別依據 state render 的每個 component
+    * 找共通的 component 所有者
+    * 共通的 component 所有者或更高層的 componenet 會擁有 state
+    * 找不到適合的位置時，可建立新的 component 持有 state，並放在共通的 component 更高層
+1. 加上反向數據流
+    * 將 callback 傳遞給子 component
 
 ## 工具
 
