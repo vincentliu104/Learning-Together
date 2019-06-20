@@ -179,23 +179,43 @@ schema 型態須為相同或是 `any`，使用 `any` 時 schema 可以是任何�
 
 ## `array` - 繼承 `Any`
 
+產生用來匹配 array 資料形態的 schema，預設不允許 undefined。`convert` 啟用時，string 會轉換成 array
+
 ## `boolean` - 繼承 `Any`
+
+產生用來匹配 boolean 資料形態的 schema。`convert` 啟用時，字串 "true" or "false" 會轉換成 `boolean`
 
 ## `binary` - 繼承 `Any`
 
+產生用來匹配 Buffer 資料形態的 schema。
+
 ## `date` - 繼承 `Any`
+
+產生用來匹配 date 資料形態(Javascript date string 或 milliseconds 數字)的 schema。
 
 ## `func` - 繼承 `Any`
 
+產生用來匹配 function 資料形態的 schema。
+
 ## `number` - 繼承 `Any`
+
+產生用來匹配 number 資料形態的 schema(或是可以轉換成 number 的字串)。`convert` 啟用時，字串會轉換成 `number`，預設不允許 `Infinity`, `-Infinity`
 
 ## `object` - 繼承 `Any`
 
+產生用來匹配 object 資料形態的 schema。預設允許任何 child key。`convert` 啟用時，字串會轉換成 `object`
+
 ## `string` - 繼承 `Any`
+
+產生用來匹配 string 資料形態的 schema。預設不允許空字串
 
 ## `symbol` - 繼承 `Any`
 
+產生用來匹配 `Symbol` 資料形態的 schema。
+
 ## `alternatives` - 繼承 `Any`
+
+透過 `try` 產生用來匹配 alternative schemas 其中之一的 schema。沒任何 schema 時，只會允許 `undefined`
 
 ## `lazy(fn[, options])` - 繼承 `Any`
 
