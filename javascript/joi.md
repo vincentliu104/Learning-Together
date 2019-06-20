@@ -64,3 +64,115 @@ npm install --save @hapi/joi
 ## `extend(extension)`
 
 客製化
+
+## `any`
+
+接受所有形態的 schema 物件
+
+### `schemaType`
+
+取得 schema 的型態
+
+### `any.allow(...values)`
+
+允許一個以上合法且任頤型態的值，支援 `references`
+
+### `any.concat(schema)`
+
+schema 型態須為相同或是 `any`，使用 `any` 時 schema 可以是任何其他 schema
+
+### `any.default([value, [description]])`
+
+原有值為 undefined 時，設定預設值
+
+### `any.describe()`
+
+同 `describe`
+
+### `any.description(desc)`
+
+描述用途
+
+### `any.empty(schema)`
+
+符合 shcema 必須為空 (`undefined`)
+
+### `any.error(err)`
+
+客製化覆寫 **joi** error
+
+### `any.example(...values)`
+
+範例，不影響驗證
+
+### `any.failover([value, [description]])`
+
+### `any.forbidden()`
+
+禁止輸入
+
+### `any.invalid(...values)` - aliases: `disallow`, `not`
+
+黑名單
+
+### `any.keep()`
+
+### `any.label(name)`
+
+變更 key 名稱
+
+### `any.message(message)`
+
+### `any.meta(meta)`
+
+### `any.notes(notes)`
+
+註解 key
+
+### `any.optional()`
+
+標示 key 為非必要欄位，可為 `undefined`，不可為 `null`
+
+### `any.prefs(options)`
+
+### `any.raw(isRaw)`
+
+驗證結果使用未轉換的值
+
+### `any.required()`
+
+不允許 `undefined`
+
+### `any.strict(isStrict)`
+
+設定 `options.convert` 為 `false`
+
+### `any.strip()`
+
+驗證後把 key 從結果中移除
+
+### `any.tags(tags)`
+
+註解標籤
+
+### `any.unit(name)`
+
+註解單位
+
+### `any.valid(value)` - aliases: `only`, `equal`
+
+白名單
+
+`value` 可以是任何型態，會在其他 rule 之前做匹配，支援 `references`
+
+### `any.validate(value, [options], [callback])`
+
+### `any.when(condition, options)`
+
+將條件合併，轉換成 `alternatives` 型態
+
+- `condition`: key name 或 reference 或 schema
+- `options`
+  - `is`: condition **joi** type，預設允許 `undefined`，可使用 `Joi.required()` 來覆寫
+  - `then`: condition 為 true 時的 schema
+  - `otherwise`: condition 為 false 時的 schema

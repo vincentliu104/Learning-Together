@@ -1,60 +1,5 @@
 const Joi = require('@hapi/joi');
 
-const schema = {
-  a: Joi.number()
-};
-
-const value = {
-  a: '123'
-};
-
-Joi.validate(value, schema, (err, value) => { });
-// err -> null
-// value.a -> 123 (number, not string)
-
-// or
-const result = Joi.validate(value, schema);
-console.log(Joi.describe(schema));
-console.log(result);
-
-// result.error -> null
-// result.value -> { "a" : 123 }
-
-// or
-const promise = Joi.validate(value, schema);
-promise.then((value) => {
-  // value -> { "a" : 123 }
-});
-
-console.log(Joi.assert('4', Joi.number()));
-
-// Joi.attempt('x', Joi.number()); // throws error
-const assertResult = Joi.attempt('4', Joi.number()); // result -> 4
-console.log(assertResult);
-
-
-const refSchema = Joi.object({
-  a: Joi.ref('b.c'),
-  b: {
-      c: Joi.any()
-  },
-  c: Joi.ref('$x')
-});
-
-const refResult = Joi.validate({ a: 5, b: { c: 5 } }, refSchema, { context: { x: 5 } }, (err, value) => {});
-// console.log(refSchema);
-// console.log(refResult);
-
-
-const reachSchema = Joi.object({ foo: Joi.object({ bar: Joi.number() }) });
-const reachNumber = Joi.reach(reachSchema, 'foo.bar');
-// console.log(reachSchema);
-// console.log(reachNumber);
-
-//or
-const reachResult = Joi.reach(reachSchema, ['foo', 'bar']); //same as number
-// console.log(reachResult);
-
 const any = Joi.any();
 const anyResult = any.validate('a', (err, value) => { });
 console.log(anyResult);
@@ -104,3 +49,37 @@ console.log(rawResult);
 const rawTimestampSchema = Joi.date().timestamp().raw();
 rawResult = rawTimestampSchema.validate('12376834097810'); // { error: null, value: '12376834097810' }
 console.log(rawResult);
+
+let stripSchema = Joi.object({
+  username: Joi.string(),
+  password: Joi.string().strip()
+});
+
+let stripResult = stripSchema.validate({ username: 'test', password: 'hunter2' }, (err, value) => {
+  // value = { username: 'test' }
+  console.log(err);
+  console.log(value);
+});
+
+stripSchema = stripSchema = Joi.array().items(Joi.string(), Joi.any().strip());
+console.log(Joi.describe(stripSchema));
+
+
+stripResult = stripSchema.validate(['one', 'two', true, false, 1, 2], (err, value) => {
+  // value = ['one', 'two']
+  console.log(err);
+  console.log(value);
+});
+
+const tagSchema = Joi.any().tags(['api', 'user']);
+console.log(Joi.describe(tagSchema));
+
+const unitSchema = Joi.number().unit('milliseconds');
+console.log(Joi.describe(unitSchema));
+
+const validSchema = {
+  a: Joi.any().valid('a'),
+  b: Joi.any().valid('b', 'B'),
+  c: Joi.any().valid(['c', 'C'])
+};
+console.log(Joi.describe(validSchema).children);
