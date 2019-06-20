@@ -176,3 +176,27 @@ schema 型態須為相同或是 `any`，使用 `any` 時 schema 可以是任何�
   - `is`: condition **joi** type，預設允許 `undefined`，可使用 `Joi.required()` 來覆寫
   - `then`: condition 為 true 時的 schema
   - `otherwise`: condition 為 false 時的 schema
+
+## `array` - 繼承 `Any`
+
+## `boolean` - 繼承 `Any`
+
+## `binary` - 繼承 `Any`
+
+## `date` - 繼承 `Any`
+
+## `func` - 繼承 `Any`
+
+## `number` - 繼承 `Any`
+
+## `object` - 繼承 `Any`
+
+## `string` - 繼承 `Any`
+
+## `symbol` - 繼承 `Any`
+
+## `alternatives` - 繼承 `Any`
+
+## `lazy(fn[, options])` - 繼承 `Any`
+
+## `Errors`
