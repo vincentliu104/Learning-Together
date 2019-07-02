@@ -8,6 +8,21 @@
 npm install --save @hapi/joi
 ```
 
+## smaple
+
+```shell
+cd ./javascript/joi-smaple
+
+# 選擇你要測試哪個規則
+node basic-validation.js
+node any-validate.js
+node array-validate.js
+node boolean-validate.js
+node date-validate.js
+node string-validate.js
+node object-validate.js
+```
+
 ## 驗證功能 `validate(value, schema, [options], [callback])`
 
 - value: 需要被驗證的欄位值
