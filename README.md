@@ -1,6 +1,7 @@
 # Learning-Together
 
-- [2018 年成為 Web 開發人員的路線圖](https://github.com/goodjack/developer-roadmap-chinese)
+- [Roadmap to becoming a web developer in 2019](https://github.com/kamranahmedse/developer-roadmap)
+- [2019 年成為 Web 開發人員的路線圖](https://github.com/goodjack/developer-roadmap-chinese)
 
 ## 使用說明
 
@@ -9,5 +10,4 @@
 3. 學完要提交，請發 pull request(PR)，reviews 驗收: `view change` > `Approve`
     - Reviewers: `vincentliu104`
     - Assignees: 自己
-    - project: `2018`
 4. 利用 `README.md` 收集學習資源
